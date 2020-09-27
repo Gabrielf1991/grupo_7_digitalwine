@@ -1,5 +1,6 @@
 # grupo_7_digitalwine
-sitio de ecommerce de vinos, bebidas y productos relacionados
+Sitio de ecommerce de vinos, bebidas y productos relacionados
+
 Venta de vinos, bebidas espirituosas y productos relacionados de forma minorista, mayorista y servicio de suscripción mensual.
 Target: Hombres de 25 a 55+ mayormente.
 
