@@ -10,8 +10,8 @@ Miembros del equipo
 3) Gabriel Flores. 28 años. Administrativo en un negocio de ópticas.
 
 Referencias
-www.bonvivir.com
-www.bacoclub.com.ar
-www.vinotecaligier.com
-www.frappe.com.ar
-www.vinosyspirits.com
+1) www.bonvivir.com
+2) www.bacoclub.com.ar
+3) www.vinotecaligier.com
+4) www.frappe.com.ar
+5) www.vinosyspirits.com
