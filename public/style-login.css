@@ -1,0 +1,186 @@
+.logo {
+    width: 213px;
+    height: auto;
+    position: relative;
+    left: 34px;
+    top: 5px;
+  }
+  
+  .container-logos {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 200px;
+    background-color: #ede2d4;
+  }
+  
+  .div-logos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+    .fa-facebook {
+        color: #890a10;
+        font-size: 20px;
+    }
+    .fa-instagram {
+        color: #890a10;
+        font-size: 20px;
+    }
+    .fa-whatsapp-square {
+        color: #890a10;
+        font-size: 20px;
+    }
+    .fa-user-alt {
+        color: #890a10;
+        font-size: 30px;
+    }
+  
+    .fa-shopping-cart {
+        color: #890a10;
+        font-size: 30px;
+    }
+  
+    .derecha {
+        position: relative;
+        left: 209px;
+        bottom: 41px;
+    }
+  .buscador {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+  }
+  
+  .topnav {
+    text-align: center;
+    display: inline;
+    position: relative;
+    bottom: 50px;
+    left: 86px;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  nav {
+    background-color: #ede2d4;
+    /*width: 722px;*/
+    margin: 0 auto;
+    position: relative;
+    bottom: 10px;
+  }
+  
+  #menu li>a:hover{
+    color: #890a10;
+    background-color: #d1898e;
+  }
+  
+  #menu li>a{
+    font-family: 'News Cycle', sans-serif;
+    background-color: #ede2d4;
+    text-decoration: none;
+    color: #890a10;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    min-width: 100px;
+  }
+  
+  #menu>li{
+    float: left;
+    text-align:center;
+    width: 16%;
+  }
+
+  /* MAIN */
+
+  .container { 
+    text-align: center;   
+    font-family: quicksand;
+    color: #890a10; 
+  }
+
+
+  .estilo-form {
+    background-color: white;
+    font-family: quicksand;
+    padding: 7px 7px;
+    border-radius: 1em;
+    width:30%;
+  }
+
+  ::placeholder { 
+    color:#890a10;
+    font-weight:bolder;
+    font-family: quicksand;
+  }
+  .register {
+    background-color: #f4efeb;
+    color: #890a10;
+    font-weight: 900;
+    font-family: quicksand;
+    padding: 7px 7px;
+    border-radius: 1em;
+    width: 10%;
+  }
+  .register:hover{
+    color: #d1898e;
+  }
+
+  /* FOOTER */
+
+  footer {
+    background-color: #890a10;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #890a10;  
+    justify-content: space-around;
+  }
+  h3 {
+    background-color: #890a10;
+    color: #f4efeb;
+    text-align: center;
+  }
+  
+  .sections {
+    background-color: #890a10;
+    color: #f4efeb;
+    font-family: quicksand;
+    
+  }
+  .contact {
+    background-color: #890a10;
+    color: #f4efeb;
+    font-family: quicksand;
+  }
+  .socials {
+    background-color: #890a10;
+    color: #f4efeb;
+    font-family: quicksand;
+  }
+  .estilo-section a {
+    background-color: #890a10;
+    color: #f4efeb;
+    text-decoration: none;
+    margin-right: 30px;
+  }
+  .estilo-section  a:hover {
+    color:#d1898e;
+  }
+  .socials #color-fab {
+    margin-right: 30px;
+  }
+  #color-fab {
+    color: #f4efeb
+  }
+  #color-fab:hover{
+    color: #d1898e;
+  }
+  
