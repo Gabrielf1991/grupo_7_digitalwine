@@ -22,4 +22,6 @@ Referencias:
 5) www.vinosyspirits.com Este sitio lo elegimos por su interfaz intuitiva al momento de realizar compras.
 6) www.camalote.store Este sitio lo elegimos por su diseño, elección de paleta de colores, facilidad de uso y experiencia de usuario.
 
+Url Trello:
+https://trello.com/b/B6aVLGdK/digital-wine-sprint-2
 
