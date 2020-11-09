@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <%- include("./partials/head.ejs")%>
+
+<body>
+
+    <%- include("./partials/header.ejs")%>
+
+<section class="section-producto">
+    <div class="div-producto">
+        <article>
+            <div><img height="400px" width="auto" src="/images/luigi-bosca.jpg" alt="Imagen Luigi Bosca"></div>
+        </article>
+        <article class="article-producto">
+            <div class="descripcion">
+                <h4>Descripción</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni recusandae maiores quam praesentium voluptatum veniam consequuntur culpa porro molestiae! Aliquid!</p>
+            </div>
+        </article>
+    </div>
+
+    <div>
+        <aside class="aside-producto">
+            <h2><u>LUIGI BOSCA MALBEC</u></h2>
+            <h4>$888,00 c/u</h4>
+            <a href="#"><h5 style="font-weight: lighter;"><u>Metodos de pago</u></h5></a>
+            <a href="#"><div class="logos-aside">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fas fa-plus"></i>
+            </div></a>
+            <hr>
+            <select class="cantidad" name="cantidad" id="">
+                <option value="selecciona" checked>Cantidad</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+            <button class="button-producto">Agregar al carrito</button>
+        </aside>
+    </div>
+</section>
+<section class="section-total-sugerencias">
+<div>
+    <div style="text-align: center;"><h4 style="color: #3e3f3c;">SUGERENCIAS</h4></div>
+    <section class="section-sugerencias">
+    <div class="sugerencias">
+        <article class="sugerencias-article">
+            <img class="img-sugerencias" width="60px" height="auto" src="/images/camera.jpg" alt="imagen placeholder">
+            <h5>Marca</h5>
+            <h5>Nombre producto</h5>
+            <h5>$000</h5>
+            <button class="boton-carrito">Agregar al carrito</button>
+        </article>
+        <article class="sugerencias-article">
+            <img class="img-sugerencias" width="60px" height="auto" src="/images/camera.jpg" alt="imagen placeholder">
+            <h5>Marca</h5>
+            <h5>Nombre producto</h5>
+            <h5>$000</h5>
+            <button class="boton-carrito">Agregar al carrito</button>
+        </article>
+        <article class="sugerencias-article">
+            <img class="img-sugerencias" width="60px" height="auto" src="/images/camera.jpg" alt="imagen placeholder">
+            <h5>Marca</h5>
+            <h5>Nombre producto</h5>
+            <h5>$000</h5>
+            <button class="boton-carrito">Agregar al carrito</button>
+        </article>
+    </div>
+    </section>
+</div>
+</section>
+
+<%- include("./partials/footer.ejs")%>
+    
+</body>
+</html>

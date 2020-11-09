@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <%- include("./partials/head.ejs")%>
+
+<body>
+    
+    <%- include("./partials/header.ejs")%>
+        
+    <main>
+            <div class="container">
+                <div class="titles">
+                <h1>Creá tu cuenta</h1>
+                <h2>Por favor, ingresá tus datos</h2>
+                </div>
+                
+            <form action="">
+                <p><label for="name"></label></p> 
+                <input type="text" name="name" id="name" placeholder="Nombre" class="estilo-form" required> 
+                <br>
+
+                <p><label for="apellido"></label></p>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="estilo-form" required> 
+                <br>
+
+                <p><label for="fecha" class="font">Fecha de Nacimiento</label></p>
+                <input type="date" id="fecha" name="fecha" placeholder="dd/mm/aaaa"> <br>
+
+                <p><label for="email"></label></p>
+                <input type="email" name="email" id="email" placeholder="E-Mail" class="estilo-form" required> <br>
+                
+                <p><label for="password"></label></p>
+                <input type="type" name="password" id="password" placeholder="Contraseña" class="estilo-form" required> <br>
+
+                <p><label for="conf-password"></label></p>
+                <input type="type" name="password" id="conf-password" placeholder="Confirmar Contraseña" class="estilo-form" required> <br>
+
+                <p><button type="submit" class="register">Enviar</button></p>
+
+            
+            </form>
+            </div>
+    </main>
+
+    <%- include("./partials/footer.ejs")%>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <%- include("../partials/head.ejs")%>
+
+<body>
+    
+    <%- include("../partials/header.ejs")%>
+
+    <section class="section-carrito">
+        <div class="articulos-carrito">
+            <h2 id="h2-carrito" >CARRITO DE COMPRAS</h2>
+
+            <article class="article-carrito">
+                <ul class="estilo-barra-carrito">
+                    <li>Producto</li>
+                    <li>Precio</li>
+                    <li>Cantidad</li>
+                    <li>Sub total</li>
+                </ul>
+            </article>
+            <hr>
+            <br>
+            <article class="article-carrito vino">
+                <i class="fas fa-wine-bottle"></i>
+                <h4>D.V. Catena Malbec</h4>
+                <h4 class="precio1">$ 999</h4>
+                <h4> -  3  + </h4>
+                <h4 class="precio">$ 2997</h4>
+                <i class="fas fa-trash-alt"></i>
+            </article>
+            <hr>
+            <br>
+            <article class="article-carrito vino">
+                <i class="fas fa-wine-bottle"></i>
+                <a href="/producto"><h4 class="linkcolor">Luigi Bosca Malbec</h4></a>
+                <h4 class="precio1">$ 888</h4>
+                <h4> -  3  + </h4>
+                <h4 class="precio">$ 2664</h4>
+                <i class="fas fa-trash-alt"></i>
+            </article>
+            <br>
+            <hr>
+            <div id="plus"><i class="far fa-plus-square"></i></div>
+
+        <div>
+            <div style="text-align: center;"><h4 style="color: #3e3f3c;">SUGERENCIAS</h4></div>
+            <section class="section-sugerencias">
+            <div class="sugerencias">
+                <article class="sugerencias-article">
+                    <img class="img-sugerencias" width="60px" height="auto" src="/images/camera.jpg" alt="imagen placeholder">
+                    <h5>Marca</h5>
+                    <h5>Nombre producto</h5>
+                    <h5>$000</h5>
+                    <button class="boton-carrito">Agregar al carrito</button>
+                </article>
+                <article class="sugerencias-article">
+                    <img class="img-sugerencias" width="60px" height="auto" src="/images/camera.jpg" alt="imagen placeholder">
+                    <h5>Marca</h5>
+                    <h5>Nombre producto</h5>
+                    <h5>$000</h5>
+                    <button class="boton-carrito">Agregar al carrito</button>
+                </article>
+                <article class="sugerencias-article">
+                    <img class="img-sugerencias" width="60px" height="auto" src="/images/camera.jpg" alt="imagen placeholder">
+                    <h5>Marca</h5>
+                    <h5>Nombre producto</h5>
+                    <h5>$000</h5>
+                    <button class="boton-carrito">Agregar al carrito</button>
+                </article>
+            </div>
+            </section>
+        </div>
+
+        </div>
+
+        <aside class="aside">
+            <h4 style="color: #3e3f3c;" >Resumen</h4>
+            <hr id="hr-resumen">
+            <h4>Subtotal     $5661</h4>
+            <hr>
+            <h4>Envío     $300</h4>
+            <hr>
+            <h4>Total     $5961</h4>
+            <hr>
+
+            <button class="boton-total">Finalizar Compra</button>
+        </aside>
+    </section>
+
+    <%- include("../partials/footer.ejs")%>
+    
+</body>
+</html>

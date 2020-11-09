@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('./partials/head.ejs') %>
+
+<body>
+    
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+        <div>
+            <a href=""><img id="banner" src="images/winecheesetb.jpeg" alt="banner"></a>
+        </div>
+
+        <div id="publi">
+            <p><a href=""><i class="fas fa-truck fa-lg"></i>Envíos a todo el país</a></p>
+            <p><a href=""><i class="far fa-credit-card fa-lg"></i> Métodos de pago</a></p>
+            <p><a href=""><i class="fas fa-tag fa-lg"></i>Beneficios DW Club</a></p>
+        </div>
+           
+        <h4>Los más vendidos</h4>
+        <div class="vendidos">
+           <div class="productdiv">
+               <div class="imgdiv">
+                   <a href="productDetail.html">
+                    <img  class="imgvend" src="images/genericwine.jpg" alt="vino1">
+                    </a>
+                </div>
+                <div class="contentdiv">
+                    <p class="parrafocontent"><b>Bodega</b></p>
+                    <p class="parrafocontent">Nombre producto</p>
+                    <p class="parrafocontent"><b>$750.00</b></p>
+                    <button class="vendidosButton">Agregar al carrito</button>
+                </div>
+            </div>
+           <div class="productdiv">
+               <div class="imgdiv">
+                   <a href="productDetail.html">
+                    <img  class="imgvend" src="images/genericwine.jpg" alt="vino2">
+                    </a>
+                </div>
+                <div class="contentdiv">
+                    <p class="parrafocontent"><b>Bodega</b></p>
+                    <p class="parrafocontent">Nombre producto</p>
+                    <p class="parrafocontent"><b>$750.00</b></p>
+                    <button class="vendidosButton">Agregar al carrito</button>
+                </div>
+            </div>
+           <div class="productdiv">
+               <div class="imgdiv">
+                   <a href="productDetail.html">
+                   <img  class="imgvend" src="images/genericwine.jpg" alt="vino3">
+                    </a>
+                </div>
+                <div class="contentdiv">
+                    <p class="parrafocontent"><b>Bodega</b></p>
+                    <p class="parrafocontent">Nombre producto</p>
+                    <p class="parrafocontent"><b>$750.00</b></p>
+                    <button class="vendidosButton">Agregar al carrito</button>
+                </div>
+            </div>
+           <div class="productdiv">
+               <div class="imgdiv">
+                   <a href="productDetail.html">
+                    <img  class="imgvend" src="images/genericwine.jpg" alt="vino4">
+                    </a>
+                </div>
+                <div class="contentdiv">
+                    <p class="parrafocontent"><b>Bodega</b></p>
+                    <p class="parrafocontent">Nombre producto</p>
+                    <p class="parrafocontent"><b>$750.00</b></p>
+                    <button class="vendidosButton">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>DW Club Blog</h4>
+            <div class="posts">
+                <div class="containerimg">
+                    <a href="">
+                        <img src="images/uvas1.jpg" alt="Avatar" class="imgpost">
+                        <div class="overlay">
+                            <div class="text">Las mejores cepas</div>
+                        </div>
+                    </a>
+                </div>  
+
+                <div class="containerimg">
+                    <a href="">
+                        <img src="images/barriles.jpg" alt="Avatar" class="imgpost">
+                        <div class="overlay">
+                            <div class="text">Nuevas técnicas de guarda</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="containerimg">
+                    <a href="">
+                        <img src="images/copa.jpg" alt="Avatar" class="imgpost">
+                        <div class="overlay">
+                            <div class="text">Cómo degustar vinos</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+
+    </main>
+
+    <%- include("./partials/footer.ejs")%>
+    
+</body>
+</html>
