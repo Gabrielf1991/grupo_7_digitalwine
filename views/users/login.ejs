@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <%- include("./partials/head.ejs")%>
+    
+<body>
+    
+    <%- include("./partials/header.ejs")%>
+        
+    <main>     
+        <div class="container">
+        
+        <div class="titles">
+            <h1>Iniciá sesión</h1>
+        </div>
+        <div>
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="E-mail" class="estilo-form" required>
+        </div>
+        <div>
+            <label for="password"></label></p>
+            <input type="password" name="password" id="password" placeholder="Contraseña" class="estilo-form" required>
+        </div>
+        <div> 
+            <p><button type="submit" class="register">Ingresá</button></p>
+        </div>
+
+        </div>  
+
+    </main>
+
+    <%- include("./partials/footer.ejs")%>
+    
+</body>
+</html>
