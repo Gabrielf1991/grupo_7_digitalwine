@@ -508,6 +508,16 @@ text {
 }
 
 
+/*------------ PRODUCT-CREATE-FORM ------------*/
+
+#estilo-form{
+  background-color: white;
+  font-family: quicksand;
+  padding: 7px 7px;
+  border-radius: 1em;
+  width:30%;
+}
+
 
 /*------------ F O O T E R ------------*/
 
