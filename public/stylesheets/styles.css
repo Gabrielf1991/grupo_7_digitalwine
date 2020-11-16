@@ -355,6 +355,15 @@ text {
         font-weight: bold;
         font-size: small;
       }
+  .imgdiv-producto{
+    width:100%;
+  }
+  .productdiv-producto{
+    padding-bottom: 0px;
+    margin-right: 1%;
+    display: flex;
+    width: 30%;
+    }
 
 /*------------ M A I N CARRITO.EJS------------*/
 
