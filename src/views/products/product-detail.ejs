@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    
-    <%- include("../partials/head.ejs")%>
+    <%- include("../partials/head.ejs") %>
 
 <body>
 
@@ -10,20 +10,20 @@
 <section class="section-producto">
     <div class="div-producto">
         <article>
-            <div><img height="400px" width="auto" src="/images/luigi-bosca.jpg" alt="Imagen Luigi Bosca"></div>
+            <div><img height="400px" width="auto" src="/images/<%= product.image %>" alt="<% product.name %>"></div>
         </article>
         <article class="article-producto">
             <div class="descripcion">
                 <h4>Descripción</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni recusandae maiores quam praesentium voluptatum veniam consequuntur culpa porro molestiae! Aliquid!</p>
+                <p><%= product.description %></p>
             </div>
         </article>
     </div>
 
     <div>
         <aside class="aside-producto">
-            <h2><u>LUIGI BOSCA MALBEC</u></h2>
-            <h4>$888,00 c/u</h4>
+            <h2><u><%= product.name %></u></h2>
+            <h4><%= product.price %> c/u</h4>
             <a href="#"><h5 style="font-weight: lighter;"><u>Metodos de pago</u></h5></a>
             <a href="#"><div class="logos-aside">
             <i class="fab fa-cc-visa"></i>
@@ -68,7 +68,7 @@
                 <div class="productdiv-producto">
                     <div class="imgdiv-producto">
                         <a href="/product-detail">
-                        <img  class="imgvend" src="images/felipeR.png" alt="vino1">
+                        <img  class="imgvend" src="/images/felipeR.png" alt="vino1">
                         </a>
                     </div>
                     <div class="contentdiv">
@@ -81,7 +81,7 @@
                 <div class="productdiv-producto">
                     <div class="imgdiv-producto">
                         <a href="/product-detail">
-                        <img  class="imgvend" src="images/felipeR.png" alt="vino1">
+                        <img  class="imgvend" src="/images/felipeR.png" alt="vino1">
                         </a>
                     </div>
                     <div class="contentdiv">
@@ -94,7 +94,7 @@
                 <div class="productdiv-producto">
                     <div class="imgdiv-producto">
                         <a href="/product-detail">
-                        <img  class="imgvend" src="images/felipeR.png" alt="vino1">
+                        <img  class="imgvend" src="/images/felipeR.png" alt="vino1">
                         </a>
                     </div>
                     <div class="contentdiv">
