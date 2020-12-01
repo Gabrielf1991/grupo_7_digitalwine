@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const mainController = require('../controllers/mainController');
+const productsController = require('../controllers/productsController');
 
-router.get('/', mainController.index);
+router.get('/', productsController.index);
 
 /*router.get('/', function(req, res, next) {
     res.render('products/products-list');

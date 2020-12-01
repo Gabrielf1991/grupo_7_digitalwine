@@ -8,6 +8,7 @@ function getAllProducts(){
 
 
 const controller = {
+    
     index: (req, res) => {
         const products = getAllProducts();
 
