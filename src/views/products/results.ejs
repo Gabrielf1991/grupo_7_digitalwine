@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs') %>
+
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+<div>
+    <div class="container">
+        <% for (product of products) { %>
+        <h2 class="titulo-productos">Resultados de la búsqueda:<%= product.name %></h2>
+        <% } %>
+    </div>
+
+        <% if(products.length > 0) { %>
+        <% for(product of products) { %>
+        <section class="section-producto">
+            <div class="div-producto">
+                <a href="/products/detail/<%= product.id %>"> 
+                        <img  height="400px" width="auto" src="/images/products/<%= product.image %>" alt="<% product.name %>">
+                    <article class="product-box_data">
+                        <h2>$<%= product.name %></h2>
+                        <p><%= product.price %></p>
+                    </article>
+                </a>
+            </div>
+        </section>
+        
+
+        <% } %>
+        <% } else { %>
+    <div class="div-producto">
+        <h2 class="titulo-productos" style="color:  #890a10;">No hay productos que coincidan con esa búsqueda</h2>
+    </div>
+        <% } %>
+</div>       
+
+<%- include("../partials/footer.ejs")%>
+
+</body>
+</html>
