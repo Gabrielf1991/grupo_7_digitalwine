@@ -27,15 +27,7 @@ const controller = {
 
     },
     detail: (req, res) => {
-        const id = req.params.id;
-        const products = getAllProducts();
-        const result = products.find((product) => {
-            return product.id == id
-        })
-
-        res.render ('products/product-detail', {
-            product: result
-        })
+        
     },
     
     create: (req, res) => {
@@ -62,36 +54,14 @@ const controller = {
 
     },
     edit: (req, res, next) => {
-        const products = getAllProducts();
-		const id = req.params.id;
-		const result = products.find((product) => product.id == id)
-
-		res.render('product-edit-form', {
-			productToEdit : result
-		})
+        
 
         
     },
     update: (req, res, next) => {
-        const products =getAllProducts();
-		const id = req.params.id;
-		const newProduct = products.map((product) => { 
-
-			if(id == product.id){
-				product.name = req.body.name;
-				product.price = req.body.price;
-				product.description = req.body.description;
+       
 				// product.image = re.files[0] ? req.files[0].filename : product.image; //
-			}
-
-			return product
-		})
-		writeProducts(newProduct);
-
-		res.redirect('/products/product-detail/' + id);
-
-        
-    },
+			},
     destroy: (req, res, next) => {
 
         
