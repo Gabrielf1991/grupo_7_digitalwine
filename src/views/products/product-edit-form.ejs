@@ -32,9 +32,9 @@
 						<p><label for="category" class="estilo-form">Categoría:</label></p>
 						<select name="category" id="category" class="estilo-form">
 							<option id="estilo-form" value="">Elegí</option>
-							<option id="estilo-form" value="Tinto">Tinto</option>
-							<option id="estilo-form" value="Blanco">Blanco</option>
-							<option id="estilo-form" value="Blanco">Rosado</option>
+							<option id="estilo-form" value="Tinto" <%= productToEdit.category == 'Tinto' ? "selected" : "" %>>Tinto</option>
+							<option id="estilo-form" value="Blanco" <%= productToEdit.category == 'Blanco' ? "selected" : "" %>>Blanco</option>
+							<option id="estilo-form" value="Rosado" <%= productToEdit.category == 'Rosado' ? "selected" : "" %>>Rosado</option>
 						</select>
 					</div>
 					<div>
