@@ -1,39 +1,180 @@
-[{"id":1,"name":"vel augue","price":"$1790.81","description":"augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam","bodega":"Dermot Gilbanks","image":"product_1.jpg"},
-    {"id":2,"name":"proin at turpis a","price":"$8939.51","description":"interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at","bodega":"Lemmy Hadland","image":"product_2.jpg"},
-    {"id":3,"name":"porttitor pede","price":"$5747.90","description":"ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus","bodega":"Nicholas Bidgod","image":"product_3.jpg"},
-    {"id":4,"name":"nunc rhoncus dui","price":"$9872.55","description":"mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem","bodega":"Ty Doleman","image":"product_4.jpg"},
-    {"id":5,"name":"ultrices phasellus","price":"$6801.53","description":"lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros","bodega":"Chloris Mation","image":"product_5.jpg"},
-    {"id":6,"name":"massa tempor","price":"$1339.71","description":"varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia","bodega":"Yale Gayne","image":"product_6.jpg"},
-    {"id":7,"name":"elementum ligula","price":"$5950.31","description":"et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec","bodega":"Agnola Basterfield","image":"product_7.jpg"},
-    {"id":8,"name":"semper est quam pharetra","price":"$2451.45","description":"fusce congue diam id ornare imperdiet sapien urna pretium nisl ut","bodega":"Debora Winsley","image":"product_8.jpg"},
-    {"id":9,"name":"tempus sit amet sem","price":"$7540.48","description":"quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum","bodega":"Nicola Panswick","image":"product_9.jpg"},
-    {"id":10,"name":"ut suscipit a feugiat","price":"$8099.57","description":"felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed","bodega":"Ky Degoe","image":"product_10.jpg"},
-    {"id":11,"name":"integer pede justo","price":"$5668.35","description":"cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis","bodega":"Marena Nolte","image":"product_11.jpg"},
-    {"id":12,"name":"potenti cras","price":"$1968.67","description":"magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis","bodega":"Ertha Skough","image":"product_12.jpg"},
-    {"id":13,"name":"consequat morbi","price":"$7347.60","description":"donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit","bodega":"Hagan Elsie","image":"product_13.jpg"},
-    {"id":14,"name":"quam sollicitudin vitae","price":"$543.69","description":"vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla","bodega":"Kalindi Deetlof","image":"product_14.jpg"},
-    {"id":15,"name":"vivamus tortor","price":"$7270.19","description":"et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient","bodega":"Tomkin Basil","image":"product_15.jpg"},
-    {"id":16,"name":"nec condimentum neque sapien","price":"$4436.18","description":"ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta","bodega":"Morgen Cuss","image":"product_16.jpg"},
-    {"id":17,"name":"placerat praesent","price":"$7242.32","description":"ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit","bodega":"Bradley Belchem","image":"product_17.jpg"},
-    {"id":18,"name":"id nulla ultrices","price":"$1370.48","description":"cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus","bodega":"Francesco Bennetto","image":"product_18.jpg"},
-    {"id":19,"name":"non interdum","price":"$4582.75","description":"odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus","bodega":"Ruthy Dibbe","image":"product_19.jpg"},
-    {"id":20,"name":"mattis egestas metus aenean","price":"$8324.56","description":"vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in","bodega":"Ammamaria Malim","image":"product_20.jpg"},
-    {
-        "id": 21,
-        "name": "Luigi Bosca",
-        "price": "$888,00",
-        "category": "Tinto",
-        "description": "Es un tinto de color rojo violáceo profundo y brillante. Sus aromas son intensos y equilibrados, con notas de frutas rojas algo maduras y especias. En boca es generoso, fluido y expresivo, con taninos incipientes. De paladar franco y paso refrescante, con buen cuerpo y carácter atractivo. Su final es profundo y nítido, con el roble totalmente integrado, y posee un buen potencial de guarda. Es un vino insignia de su variedad.",
-        "bodega": "Luigi Bosca",
-        "image": "luigi-bosca.jpg"
-    },
-    {
-        "id": 22,
-        "name": "Saint Felicien Syrah",
-        "price": "$1.090",
-        "category": "Tinto",
-        "description": "Saint Felicien Syrah es un vino elegante y complejo, de color violeta oscuro y profundo. Su aroma remite a ciruelas y moras maduras, con ligeros toques de ahumado y tabaco aportados por el roble. En boca, de impacto dulce y gran complejidad, es un vino untuoso, con taninos suaves y redondos que le otorgan una gran armonía final.",
-        "bodega": "Saint Felicien",
-        "image": "felicien.png"
-    }
+[
+ {
+  "id": 1,
+  "name": "vel augue",
+  "price": "$1790.81",
+  "description": "augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam",
+  "bodega": "Dermot Gilbanks",
+  "image": "product_1.jpg"
+ },
+ {
+  "id": 2,
+  "name": "proin at turpis a",
+  "price": "$8939.51",
+  "description": "interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at",
+  "bodega": "Lemmy Hadland",
+  "image": "product_2.jpg"
+ },
+ {
+  "id": 3,
+  "name": "porttitor pede",
+  "price": "$5747.90",
+  "description": "ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus",
+  "bodega": "Nicholas Bidgod",
+  "image": "product_3.jpg"
+ },
+ {
+  "id": 4,
+  "name": "nunc rhoncus dui",
+  "price": "$9872.55",
+  "description": "mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem",
+  "bodega": "Ty Doleman",
+  "image": "product_4.jpg"
+ },
+ {
+  "id": 5,
+  "name": "ultrices phasellus",
+  "price": "$6801.53",
+  "description": "lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros",
+  "bodega": "Chloris Mation",
+  "image": "product_5.jpg"
+ },
+ {
+  "id": 6,
+  "name": "massa tempor",
+  "price": "$1339.71",
+  "description": "varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
+  "bodega": "Yale Gayne",
+  "image": "product_6.jpg"
+ },
+ {
+  "id": 7,
+  "name": "elementum ligula",
+  "price": "$5950.31",
+  "description": "et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec",
+  "bodega": "Agnola Basterfield",
+  "image": "product_7.jpg"
+ },
+ {
+  "id": 8,
+  "name": "semper est quam pharetra",
+  "price": "$2451.45",
+  "description": "fusce congue diam id ornare imperdiet sapien urna pretium nisl ut",
+  "bodega": "Debora Winsley",
+  "image": "product_8.jpg"
+ },
+ {
+  "id": 9,
+  "name": "tempus sit amet sem",
+  "price": "$7540.48",
+  "description": "quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum",
+  "bodega": "Nicola Panswick",
+  "image": "product_9.jpg"
+ },
+ {
+  "id": 10,
+  "name": "ut suscipit a feugiat",
+  "price": "$8099.57",
+  "description": "felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed",
+  "bodega": "Ky Degoe",
+  "image": "product_10.jpg"
+ },
+ {
+  "id": 11,
+  "name": "integer pede justo",
+  "price": "$5668.35",
+  "description": "cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis",
+  "bodega": "Marena Nolte",
+  "image": "product_11.jpg"
+ },
+ {
+  "id": 12,
+  "name": "potenti cras",
+  "price": "$1968.67",
+  "description": "magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis",
+  "bodega": "Ertha Skough",
+  "image": "product_12.jpg"
+ },
+ {
+  "id": 13,
+  "name": "consequat morbi",
+  "price": "$7347.60",
+  "description": "donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit",
+  "bodega": "Hagan Elsie",
+  "image": "product_13.jpg"
+ },
+ {
+  "id": 14,
+  "name": "quam sollicitudin vitae",
+  "price": "$543.69",
+  "description": "vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla",
+  "bodega": "Kalindi Deetlof",
+  "image": "product_14.jpg"
+ },
+ {
+  "id": 15,
+  "name": "vivamus tortor",
+  "price": "$7270.19",
+  "description": "et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient",
+  "bodega": "Tomkin Basil",
+  "image": "product_15.jpg"
+ },
+ {
+  "id": 16,
+  "name": "nec condimentum neque sapien",
+  "price": "$4436.18",
+  "description": "ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta",
+  "bodega": "Morgen Cuss",
+  "image": "product_16.jpg"
+ },
+ {
+  "id": 17,
+  "name": "placerat praesent",
+  "price": "$7242.32",
+  "description": "ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit",
+  "bodega": "Bradley Belchem",
+  "image": "product_17.jpg"
+ },
+ {
+  "id": 18,
+  "name": "id nulla ultrices",
+  "price": "$1370.48",
+  "description": "cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus",
+  "bodega": "Francesco Bennetto",
+  "image": "product_18.jpg"
+ },
+ {
+  "id": 19,
+  "name": "non interdum",
+  "price": "$4582.75",
+  "description": "odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus",
+  "bodega": "Ruthy Dibbe",
+  "image": "product_19.jpg"
+ },
+ {
+  "id": 20,
+  "name": "mattis egestas metus aenean",
+  "price": "$8324.56",
+  "description": "vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in",
+  "bodega": "Ammamaria Malim",
+  "image": "product_20.jpg"
+ },
+ {
+  "id": 21,
+  "name": "Luigi Bosca",
+  "price": "$888,00",
+  "category": "Tinto",
+  "description": "Es un tinto de color rojo violáceo profundo y brillante. Sus aromas son intensos y equilibrados, con notas de frutas rojas algo maduras y especias. En boca es generoso, fluido y expresivo, con taninos incipientes. De paladar franco y paso refrescante, con buen cuerpo y carácter atractivo. Su final es profundo y nítido, con el roble totalmente integrado, y posee un buen potencial de guarda. Es un vino insignia de su variedad.",
+  "bodega": "Luigi Bosca",
+  "image": "luigi-bosca.jpg"
+ },
+ {
+  "id": 22,
+  "name": "Saint Felicien Syrah",
+  "price": "$1.100",
+  "category": "",
+  "description": "Saint Felicien Syrah es un vino elegante y complejo, de color violeta oscuro y profundo. Su aroma remite a ciruelas y moras maduras, con ligeros toques de ahumado y tabaco aportados por el roble. En boca, de impacto dulce y gran complejidad, es un vino untuoso, con taninos suaves y redondos que le otorgan una gran armonía final.",
+  "bodega": "Saint Felicien",
+  "image": ""
+ }
 ]
