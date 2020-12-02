@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+function getAllProducts(){
+    const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+    return JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+}
 
 function writeProducts(productsToSave){
 	const productsToStringify = JSON.stringify(productsToSave, null, ' ');
@@ -66,6 +70,46 @@ const controller = {
         writeProducts(editedProducts);
         res.redirect('/product-detail/' + id)
     },
+
+    
+
+    create: (req, res) => {
+
+        res.render('product-create-form');
+
+    },
+    store: (req, res, next) => {
+
+        const newProduct = {
+
+            id: generateNewId(),
+
+            name:req.body.name,
+
+            price:req.body.price ,
+
+            description:req.body.description,
+
+            bodega: req.body.bodega,
+
+            // image: "" //
+
+        }
+
+        const products = getAllProducts();
+
+        const productsToSave = [...products, newProduct];
+
+        writeProducts(productsToSave);
+
+        res.redirect('/');
+
+    },
+    destroy: (req, res, next) => {
+
+        
+
+    }
 }
 
 module.exports = controller;

@@ -160,21 +160,21 @@
   "image": "product_20.jpg"
  },
  {
-  "id": 21,
-  "name": "Luigi Bosca",
-  "price": "$888,00",
-  "category": "Tinto",
-  "description": "Es un tinto de color rojo violáceo profundo y brillante. Sus aromas son intensos y equilibrados, con notas de frutas rojas algo maduras y especias. En boca es generoso, fluido y expresivo, con taninos incipientes. De paladar franco y paso refrescante, con buen cuerpo y carácter atractivo. Su final es profundo y nítido, con el roble totalmente integrado, y posee un buen potencial de guarda. Es un vino insignia de su variedad.",
-  "bodega": "Luigi Bosca",
-  "image": "luigi-bosca.jpg"
- },
+    "id": 21,
+    "name": "Luigi Bosca",
+    "price": "$888,00",
+    "category": "Tinto",
+    "description": "Es un tinto de color rojo violáceo profundo y brillante. Sus aromas son intensos y equilibrados, con notas de frutas rojas algo maduras y especias. En boca es generoso, fluido y expresivo, con taninos incipientes. De paladar franco y paso refrescante, con buen cuerpo y carácter atractivo. Su final es profundo y nítido, con el roble totalmente integrado, y posee un buen potencial de guarda. Es un vino insignia de su variedad.",
+    "bodega": "Luigi Bosca",
+    "image": "luigi-bosca.jpg"
+   },
  {
   "id": 22,
   "name": "Saint Felicien Syrah",
   "price": "$1.100",
-  "category": "",
+  "category": "Tinto",
   "description": "Saint Felicien Syrah es un vino elegante y complejo, de color violeta oscuro y profundo. Su aroma remite a ciruelas y moras maduras, con ligeros toques de ahumado y tabaco aportados por el roble. En boca, de impacto dulce y gran complejidad, es un vino untuoso, con taninos suaves y redondos que le otorgan una gran armonía final.",
   "bodega": "Saint Felicien",
-  "image": ""
+  "image": "felicien.png"
  }
 ]
