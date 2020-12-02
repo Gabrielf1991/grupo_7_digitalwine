@@ -10,7 +10,7 @@
 <section class="section-producto">
     <div class="div-producto">
         <article>
-            <div><img height="400px" width="auto" src="/images/<%= product.image %>" alt="<% product.name %>"></div>
+            <div><img height="400px" width="auto" src="/images/productos/<%= product.image %>" alt="<% product.name %>"></div>
         </article>
         <article class="article-producto">
             <div class="descripcion">
@@ -56,6 +56,10 @@
                 <option value="20">20</option>
             </select>
             <button class="button-producto">Agregar al carrito</button>
+            <a href="/product-edit-form/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+			<form action="/products/delete/<%= product.id %>" method="POST" style="display: inline-flex">
+				<button type="submit" class="action-button delete">ELIMINAR</button>
+			</form>
         </aside>
     </div>
 </section>
@@ -68,7 +72,7 @@
                 <div class="productdiv-producto">
                     <div class="imgdiv-producto">
                         <a href="/product-detail">
-                        <img  class="imgvend" src="/images/felipeR.png" alt="vino1">
+                        <img  class="imgvend" src="/images/productos/felipeR.png" alt="vino1">
                         </a>
                     </div>
                     <div class="contentdiv">
@@ -81,7 +85,7 @@
                 <div class="productdiv-producto">
                     <div class="imgdiv-producto">
                         <a href="/product-detail">
-                        <img  class="imgvend" src="/images/felipeR.png" alt="vino1">
+                        <img  class="imgvend" src="/images/productos/felipeR.png" alt="vino1">
                         </a>
                     </div>
                     <div class="contentdiv">
@@ -94,7 +98,7 @@
                 <div class="productdiv-producto">
                     <div class="imgdiv-producto">
                         <a href="/product-detail">
-                        <img  class="imgvend" src="/images/felipeR.png" alt="vino1">
+                        <img  class="imgvend" src="/images/productos/felipeR.png" alt="vino1">
                         </a>
                     </div>
                     <div class="contentdiv">

@@ -141,7 +141,7 @@ nav {
 
   /*------------ M A I N INDEX.EJS------------*/
 
-
+asd
   #banner{
     width: 90%;
     margin-left: 6%;
@@ -292,7 +292,7 @@ text {
 
 .aside-producto{
   background-color: #ede2d4;
-  height: 325px;
+  height: auto;
   width: 100%;
   border-style: double;
   text-align: center;
@@ -319,6 +319,24 @@ text {
     color: #890a10;
     font-weight: bold;
     font-size: small;
+  }
+  .action-button {
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #ffffff !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 18px;
+    margin-top: 14px;
+  }
+  
+  .action-button.edit {
+    background-color: rgb(42, 129, 2);
+  }
+  .action-button.delete {
+    background-color: rgb(248, 69, 37);
   }
 
   .section-total-sugerencias{
