@@ -1,10 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-function getAllProducts(){
-    const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-    return JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-}
 
 function writeProducts(productsToSave){
 	const productsToStringify = JSON.stringify(productsToSave, null, ' ');

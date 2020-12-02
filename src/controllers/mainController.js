@@ -10,19 +10,16 @@ function getAllProducts(){
 const controller = {
     
     index: (req, res) => {
-        const products = getAllProducts();
+       res.render('index');
 
-        res.render('products/products-list', {
-            products: products,
-        });
     },
     search: (req, res) => {
-        const searched = req.query.keywords;
         const products = getAllProducts();
+        const searched = req.query.keywords;
         const foundProduct = products.filter(product => product.name.toLowerCase().includes(searched))
 
-        res.render('results', {
-            product: foundProduct
+        res.render('./products/results', {
+            products: foundProduct
         })
     },
 };
