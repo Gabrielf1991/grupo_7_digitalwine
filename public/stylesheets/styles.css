@@ -21,6 +21,13 @@ a:visited{
 }
 
 
+@media(max-width:440px){
+
+    
+
+}
+
+
 /*------------ H E A D E R ------------*/
 
 
@@ -141,13 +148,18 @@ nav {
 
   /*------------ M A I N INDEX.EJS------------*/
 
-asd
-  #banner{
-    width: 90%;
-    margin-left: 6%;
-    margin-right: 3%;
+  
+#imgbox{
+  width: auto;
 }
 
+
+#banner{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
 
 #publi{
     border-style: solid;
@@ -266,14 +278,6 @@ text {
   opacity: 1;
 }
 
-
-
-@media(max-width:320px){
-  #publi{
-    border: none;
-
-  }
-}
 
 /*------------ M A I N PRODUCTO.EJS------------*/
 
