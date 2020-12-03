@@ -30,7 +30,7 @@ router.put('/:id', upload.any(), productsController.update);
 
 
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/:id', productsController.destroy);
+router.delete('/delete/:id', productsController.destroy);
 
 /*router.get('/', function(req, res, next) {
     res.render('products/products-list');
