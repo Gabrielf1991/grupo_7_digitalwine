@@ -106,9 +106,12 @@ const controller = {
 
     },
     destroy: (req, res, next) => {
-
-        
-
+            const products = getAllProducts();
+            const productsDelete = products.filter(product => product.id != req.params.id);
+    
+            writeProducts(productsDelete);
+            res.redirect('/products');
+      
     }
 }
 
