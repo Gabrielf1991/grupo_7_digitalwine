@@ -571,7 +571,7 @@ text {
   margin-left: 3%;
   margin-right: 3%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding:0;
   flex-direction: row;
   flex-wrap: wrap;
