@@ -1,32 +1,48 @@
 const fs = require('fs');
 const path = require('path');
+let bcrypt = require('bcrypt')
 
+function getAllUsers(){
+    const usersFilePath = path.join(__dirname, '../data/users.json');
+    return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+}
+
+function generateNewId(){
+    const products = getAllUsers();
+	return products.pop().id + 1;
+}
 
 const usersController = {
     register: function (req, res) {
-        return res.render('register');
+        return res.render('users/register');
     },
-    store: function(req, res){
-        let usersJSON = fs.readFileSync('users.json', { encoding: 'utf-8'});
+    store: function(req, res, next){
+
+        const usersJSON = fs.readFileSync('src/data/users.json', { encoding: 'utf-8'});
         let users;
+        console.log(usersJSON)
         if (usersJSON == '') {
             users = [];
         } else {
-            users.JSON.parse(usersJSON);
+            users = JSON.parse(usersJSON);
         }
-
-        let user = {
+        
+        const user = {
+            id: generateNewId(),
+            name: req.body.name,
+            last_name: req.body.last_name,
             email: req.body.email,
-            username: req.body.username,
             password: bcrypt.hashSync(req.body.password, 10),
-            age:req.body.age
+            date: req.body.date,
+            avatar: req.files[0].filename
         };
+        
+        
+        users.push(user);
+        const newusersJSON = JSON.stringify(users, null, ' ');
+        fs.writeFileSync('src/data/users.json', newusersJSON);
 
-        users.push(user)
-        usersJSON = JSON.stringify(users);
-        fs.writeFileSync('users.json', usersJSON);
-
-        return res.render('success');
+        return res.render('../views/index');
     }
 }
 

@@ -1,20 +1,11 @@
-[{"id":1,"Nombre":"Matthaeus","Apellido":"O' Ronan","Email":"moronan0@yandex.ru","Contraseña":"dQdbDqjUN","Categoria":"user","Imagen":"user_1.jpg"},
-    {"id":2,"Nombre":"Reinhard","Apellido":"Stribling","Email":"rstribling1@upenn.edu","Contraseña":"pFZ4XO7EMJ","Categoria":"user","Imagen":"user_2.jpg"},
-    {"id":3,"Nombre":"Cass","Apellido":"Softley","Email":"csoftley2@about.com","Contraseña":"Y7P3CK","Categoria":"user","Imagen":"user_3.jpg"},
-    {"id":4,"Nombre":"Kennett","Apellido":"Fenelon","Email":"kfenelon3@java.com","Contraseña":"DZwiMgO","Categoria":"user","Imagen":"user_4.jpg"},
-    {"id":5,"Nombre":"Yoko","Apellido":"MacGaughie","Email":"ymacgaughie4@ifeng.com","Contraseña":"aiADjyFpIL","Categoria":"user","Imagen":"user_5.jpg"},
-    {"id":6,"Nombre":"Raimundo","Apellido":"Warriner","Email":"rwarriner5@domainmarket.com","Contraseña":"NQIpeuqoGr6","Categoria":"user","Imagen":"user_6.jpg"},
-    {"id":7,"Nombre":"Lonni","Apellido":"Dandison","Email":"ldandison6@merriam-webster.com","Contraseña":"3WLpFI1G","Categoria":"user","Imagen":"user_7.jpg"},
-    {"id":8,"Nombre":"Cyrill","Apellido":"Zambonini","Email":"czambonini7@skyrock.com","Contraseña":"UaLhs6Kt","Categoria":"user","Imagen":"user_8.jpg"},
-    {"id":9,"Nombre":"Analise","Apellido":"Sheather","Email":"asheather8@twitpic.com","Contraseña":"lVE0yE5","Categoria":"user","Imagen":"user_9.jpg"},
-    {"id":10,"Nombre":"Theodora","Apellido":"Proudley","Email":"tproudley9@marketwatch.com","Contraseña":"UqfTGZn5he4","Categoria":"user","Imagen":"user_10.jpg"},
-    {"id":11,"Nombre":"Martyn","Apellido":"Gustus","Email":"mgustusa@sciencedaily.com","Contraseña":"QJbbKp7","Categoria":"user","Imagen":"user_11.jpg"},
-    {"id":12,"Nombre":"Collie","Apellido":"Jaram","Email":"cjaramb@ted.com","Contraseña":"D8mGs99","Categoria":"user","Imagen":"user_12.jpg"},
-    {"id":13,"Nombre":"Mic","Apellido":"Whitman","Email":"mwhitmanc@mashable.com","Contraseña":"MSt7N38G3H","Categoria":"user","Imagen":"user_13.jpg"},
-    {"id":14,"Nombre":"Celinka","Apellido":"Christensen","Email":"cchristensend@lulu.com","Contraseña":"9UIaFeOzT","Categoria":"user","Imagen":"user_14.jpg"},
-    {"id":15,"Nombre":"Mateo","Apellido":"Erricker","Email":"merrickere@wufoo.com","Contraseña":"5hkK1Y6tj","Categoria":"user","Imagen":"user_15.jpg"},
-    {"id":16,"Nombre":"Guthry","Apellido":"Uff","Email":"gufff@weebly.com","Contraseña":"vZH3Ls8","Categoria":"user","Imagen":"user_16.jpg"},
-    {"id":17,"Nombre":"Joleen","Apellido":"Merriment","Email":"jmerrimentg@technorati.com","Contraseña":"DXFg8ctTpAaz","Categoria":"user","Imagen":"user_17.jpg"},
-    {"id":18,"Nombre":"Lindsay","Apellido":"Danilchik","Email":"ldanilchikh@ifeng.com","Contraseña":"u3Pgj9IV","Categoria":"user","Imagen":"user_18.jpg"},
-    {"id":19,"Nombre":"Reggi","Apellido":"Popplestone","Email":"rpopplestonei@time.com","Contraseña":"lp2Ehs","Categoria":"user","Imagen":"user_19.jpg"},
-    {"id":20,"Nombre":"Gifford","Apellido":"Karsh","Email":"gkarshj@skype.com","Contraseña":"UeA1bguJ6s","Categoria":"user","Imagen":"user_20.jpg"}]
+[
+ {
+  "id": 0,
+  "name": "primer",
+  "last_name": "multer",
+  "email": "asdasd@hotmail.com",
+  "password": "$2b$10$jYtNwPdDSAAlNz2HiasP0uluMXH5NYxqqFpE48B5ALAbJE0.KCtbS",
+  "date": "2020-12-01",
+  "avatar": "avatar-1608500936640.jpg"
+ }
+]

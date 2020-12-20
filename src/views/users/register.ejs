@@ -14,28 +14,35 @@
                 <h2>Por favor, ingresá tus datos</h2>
                 </div>
                 
-            <form action="">
+            <form method="POST" action="/register" enctype="multipart/form-data">
                 <p><label for="name"></label></p> 
                 <input type="text" name="name" id="name" placeholder="Nombre" class="estilo-form" required> 
                 <br>
 
-                <p><label for="apellido"></label></p>
-                <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="estilo-form" required> 
+                <p><label for="last_name"></label></p>
+                <input type="text" name="last_name" id="last_name" placeholder="Apellido" class="estilo-form" required> 
+                <br>
+                
                 <br>
 
-                <p><label for="fecha" class="font">Fecha de Nacimiento</label></p>
-                <input type="date" id="fecha" name="fecha" placeholder="dd/mm/aaaa"> <br>
+                <span><label for="date" class="font">Fecha de Nacimiento</label></span>
+                <input type="date" id="date" name="date" placeholder="dd/mm/aaaa"> <br>
+
+                <br>
+
+                <span><label for="avatar" class="font">Cargá tu foto</label></span>
+                <input type="file" name="avatar"> <br>
 
                 <p><label for="email"></label></p>
                 <input type="email" name="email" id="email" placeholder="E-Mail" class="estilo-form" required> <br>
                 
                 <p><label for="password"></label></p>
-                <input type="type" name="password" id="password" placeholder="Contraseña" class="estilo-form" required> <br>
+                <input type="password" name="password" id="password" placeholder="Contraseña" class="estilo-form" required> <br>
 
-                <p><label for="conf-password"></label></p>
-                <input type="type" name="password" id="conf-password" placeholder="Confirmar Contraseña" class="estilo-form" required> <br>
-
-                <p><button type="submit" class="register">Enviar</button></p>
+                <!--<p><label for="conf-password"></label></p>
+                <input type="password" name="password" id="conf-password" placeholder="Confirmar Contraseña" class="estilo-form" required> <br>
+                    -->
+                <p><button type="submit" class="register">Enviar</button></p> 
 
             
             </form>
