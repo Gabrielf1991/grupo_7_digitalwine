@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="container clase-create-form">
-			<form action="/product-edit-form/<%= productToEdit.id %>?_method=PUT" method="POST">
+			<form action="/product-edit-form/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div>
 					<div>
 						<p><label for="name" class="estilo-form">Nombre del producto:</label></p>
