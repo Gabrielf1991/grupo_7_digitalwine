@@ -1,7 +1,7 @@
 [
  {
   "id": 1,
-  "name": "COQUENA MALBEC",
+  "name": "Coquena Malbec",
   "price": "$595,00",
   "category": "Tinto",
   "variedad": "Malbec",
@@ -168,14 +168,7 @@
   "description": "Es un tinto de color rojo violáceo profundo y brillante. Sus aromas son intensos y equilibrados, con notas de frutas rojas algo maduras y especias. En boca es generoso, fluido y expresivo, con taninos incipientes. De paladar franco y paso refrescante, con buen cuerpo y carácter atractivo. Su final es profundo y nítido, con el roble totalmente integrado, y posee un buen potencial de guarda. Es un vino insignia de su variedad.",
   "bodega": "Luigi Bosca",
   "image": "luigi-bosca.jpg"
- },
- {
-  "id": 18,
-  "name": "Don Valentin Lacrado Blanco",
-  "price": "180",
-  "description": "\r\n    La copa se viste de un color verde con matices vivaces y atractivos.\r\n    De aromas intensos y refrescantes donde predominan las notas cítricas y frutas tropicales perfectamente amalgamadas.\r\n    Notas refrescantes, de acidez viva y equilibrada que junto a algunas finas burbujas, invitan a seguir bebiéndolo, de volumen medio y deleitable armonía. Se mezclan las sensaciones frescas con el volumen y sedocidad del Chardonnay.\r\n",
-  "image": "image-1608581203234.webp",
-  "bodega": "Bianchi",
-  "category": "Blanco"
  }
 ]
+
+//====== color gris-oscuro #626362 ======//

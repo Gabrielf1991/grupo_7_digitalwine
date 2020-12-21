@@ -43,12 +43,11 @@ const controller = {
 		const result = products.find((product) => {
 			return product.id == id
         })
-        console.log(result);
         res.render('products/product-edit-form', {
 			productToEdit: result
 		})
     },
-    update: (req, res) => {
+    update: (req, res, next) => {
         const products = getAllProducts();
         const id = req.params.id;
 
@@ -59,9 +58,9 @@ const controller = {
                 product.bodega = req.body.bodega;
                 product.category = req.body.category;
                 product.description = req.body.description;
-                product.image = "" //req.files[0] ? req.files[0].filename : product.image
+                product.image = req.files[0] ? req.files[0].filename : product.image
             }
-            console.log(product);
+            
             return product;
 
             
@@ -75,7 +74,7 @@ const controller = {
 
     create: (req, res) => {
 
-        res.render('product-create-form');
+        res.render('products/product-create-form');
 
     },
     store: (req, res, next) => {
@@ -92,7 +91,7 @@ const controller = {
 
             bodega: req.body.bodega,
 
-            // image: "" //
+            image: req.files[0].filename
 
         }
 
