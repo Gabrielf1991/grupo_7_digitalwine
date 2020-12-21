@@ -7,5 +7,14 @@
   "password": "$2b$10$jYtNwPdDSAAlNz2HiasP0uluMXH5NYxqqFpE48B5ALAbJE0.KCtbS",
   "date": "2020-12-01",
   "avatar": "avatar-1608500936640.jpg"
+ },
+ {
+  "id": 1,
+  "name": "Juan",
+  "last_name": "Perez",
+  "email": "juanperez@gmail.com",
+  "password": "$2b$10$7GWO3zAdrDlFIHGl6mtyYeRNQwXGGllrrEH1DDyup15CXmg1dzwLe",
+  "date": "2020-12-01",
+  "avatar": "avatar-1608590153514.JPG"
  }
 ]

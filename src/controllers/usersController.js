@@ -43,7 +43,30 @@ const usersController = {
         fs.writeFileSync('src/data/users.json', newusersJSON);
 
         return res.render('../views/index');
-    }
+    },
+
+    login: function (req, res, next) {
+
+        res.render('../views/users/login');
+
+    },
+    processLogin : function (req, res) {
+
+        const email= req.body.email;
+        const password= req.body.password;
+        const users= getAllUsers();
+
+        const existingUser= users.find((user) => {
+            return user.email === email;
+        });
+
+        if(existingUser && bcrypt.compareSync(password, existingUser.password)) {
+            req.session.email = email;
+            
+            res.redirect('/');
+        }
+           res.redirect('/register')
+        }
 }
 
 module.exports = usersController;
