@@ -13,6 +13,7 @@ function generateNewId(){
 }
 
 const usersController = {
+    
     register: function (req, res) {
         return res.render('users/register');
     },
@@ -67,16 +68,13 @@ const usersController = {
         }
            res.redirect('/register')
         },
-    detail: (req, res) => {
+    showProfile: (req, res) => {
             const user = getAllUsers().find((user) => {
                 return user.email === req.session.email;
             });
     
-            res.render ('users/user', {
-                name: user.name,
-                last_name: user.last_name,
-                email: user.email,
-                date: user.date
+            res.render ('users/profile', {
+                userToShow: user
             })
         },
 }

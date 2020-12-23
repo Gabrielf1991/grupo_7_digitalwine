@@ -25,5 +25,14 @@
   "password": "$2b$10$nNwmbS.rFFxZFZUfSgfgJ.UEvyIQnDcfwHeN9jKHThkoZYMiNMP5G",
   "date": "2020-11-12",
   "avatar": "avatar-1608722659824.gif"
+ },
+ {
+  "id": 3,
+  "name": "asd123",
+  "last_name": "asd123",
+  "email": "asd123@asd.com",
+  "password": "$2b$10$DU3nEiPsEyoxMKbx7oPrEOMAaexxw.cCUa/rxoUYSm7Tjz7p9BFaa",
+  "date": "2020-12-01",
+  "avatar": "avatar-1608761492559.jpg"
  }
 ]

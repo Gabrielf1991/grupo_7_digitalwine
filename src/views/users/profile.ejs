@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <%- include("../partials/head.ejs")%>
+    <body>
+
+        <%- include("../partials/header.ejs")%>
+        <div id="userdiv">
+            <h1>Perfil de Usuario</h1>
+            <div id="userimg">
+                <img height="300px" width="auto" src="/images/users/<%=userToShow.avatar %>" alt="">
+            </div>
+            <div id="datodiv">
+                <p class="datopar"> <span class="propiedad">Nombre: <%= userToShow.name %> </span> </p>
+                <p class="datopar"> <span class="propiedad">Apellido: <%= userToShow.last_name %></span> </p>
+                <p class="datopar"> <span class="propiedad">E-mail: <%= userToShow.email %></span></p>
+                <p class="datopar"> <span class="propiedad">Fecha de Nacimiento: <%= userToShow.date %></span>  </p>
+            </div>
+        </div>
+        <%- include("../partials/footer.ejs")%>
+
+    </body>
+</html>
