@@ -19,6 +19,6 @@ router.get('/users', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/:id', authMiddleware, usersController.detail)
+router.get('/profile/:id', authMiddleware, usersController.showProfile)
 
 module.exports = router;
