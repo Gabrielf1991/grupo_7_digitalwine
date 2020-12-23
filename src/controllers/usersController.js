@@ -63,10 +63,22 @@ const usersController = {
         if(existingUser && bcrypt.compareSync(password, existingUser.password)) {
             req.session.email = email;
             
-            res.redirect('/');
+            return res.redirect('/');
         }
            res.redirect('/register')
-        }
+        },
+    detail: (req, res) => {
+            const user = getAllUsers().find((user) => {
+                return user.email === req.session.email;
+            });
+    
+            res.render ('users/user', {
+                name: user.name,
+                last_name: user.last_name,
+                email: user.email,
+                date: user.date
+            })
+        },
 }
 
 module.exports = usersController;

@@ -3,6 +3,7 @@ const usersController = require('../controllers/usersController');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 const storage = multer.diskStorage({
@@ -17,7 +18,7 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage })
 
 
-router.get('/', usersController.register);
+router.get('/', guestMiddleware, usersController.register);
 router.post('/', upload.any(), usersController.store);
 
 module.exports = router;

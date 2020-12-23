@@ -16,5 +16,14 @@
   "password": "$2b$10$7GWO3zAdrDlFIHGl6mtyYeRNQwXGGllrrEH1DDyup15CXmg1dzwLe",
   "date": "2020-12-01",
   "avatar": "avatar-1608590153514.JPG"
+ },
+ {
+  "id": 2,
+  "name": "Gabriel",
+  "last_name": "Flores",
+  "email": "gabrielflores1991@gmail.com",
+  "password": "$2b$10$nNwmbS.rFFxZFZUfSgfgJ.UEvyIQnDcfwHeN9jKHThkoZYMiNMP5G",
+  "date": "2020-11-12",
+  "avatar": "avatar-1608722659824.gif"
  }
 ]
