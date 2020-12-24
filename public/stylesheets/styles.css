@@ -550,6 +550,10 @@ text {
   color: #d1898e;
 }
 
+#password {
+  margin-bottom: 1%;
+}
+
 
 /*------------ PRODUCT-CREATE-FORM ------------*/
 

@@ -62,6 +62,11 @@ const usersController = {
         });
 
         if(existingUser && bcrypt.compareSync(password, existingUser.password)) {
+
+            if (req.body.recordarme) {
+                res.cookie('email', email, { maxAge:3600000 })
+            }
+
             req.session.email = email;
             
             return res.redirect('/');
@@ -70,7 +75,7 @@ const usersController = {
         },
     showProfile: (req, res) => {
             const user = getAllUsers().find((user) => {
-                return user.email === req.session.email;
+                return user.email === req.userEmail;
             });
     
             res.render ('users/profile', {
