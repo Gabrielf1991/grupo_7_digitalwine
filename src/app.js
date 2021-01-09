@@ -17,6 +17,9 @@ const productEditFormRouter = require('./routes/product-edit-form');
 const productsRouter = require('./routes/products');
 const mainRouter = require('./routes/main');
 
+const productsdbRouter = require('./routes/productsdb');
+const usersdbRouter = require('./routes/usersdb');
+
 const app = express();
 
 // view engine setup
@@ -48,6 +51,9 @@ app.use('/product-edit-form', productEditFormRouter);
 
 app.use('/products', productsRouter);
 app.use('/', mainRouter);
+
+app.use('/productsdb', productsdbRouter.list)
+app.use('/usersdb', usersdbRouter.list)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

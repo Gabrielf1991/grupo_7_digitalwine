@@ -82,6 +82,11 @@ const usersController = {
                 userToShow: user
             })
         },
+    list: async (req, res, next) => {
+            const usersdb = await db.User.findAll();
+    
+            res.render('/usersdb', { usersdb })
+        }
 }
 
 module.exports = usersController;

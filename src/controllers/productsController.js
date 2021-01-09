@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+// const db = require('../database/models');
 
 function getAllProducts(){
     const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -111,6 +112,12 @@ const controller = {
             writeProducts(productsDelete);
             res.redirect('/products');
       
+    },
+
+    list: async (req, res, next) => {
+        const productsdb = await db.Product.findAll();
+
+        res.render('/productsdb', { productsdb })
     }
 }
 
