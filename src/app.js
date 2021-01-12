@@ -47,6 +47,7 @@ app.use('/product-detail', productoRouter);
 app.use('/register', registerRouter);
 app.use('/product-create-form', productCreateFormRouter);
 app.use('/product-edit-form', productEditFormRouter);
+app.use('/usersdb', usersdbRouter);
 
 app.use('/products', productsRouter);
 app.use('/', mainRouter);
