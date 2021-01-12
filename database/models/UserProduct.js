@@ -13,13 +13,13 @@ const UserProduct = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         },
         created_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         },
         updated_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         },
         deleted_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         }
     };
 

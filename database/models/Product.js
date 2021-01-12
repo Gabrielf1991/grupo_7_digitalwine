@@ -31,13 +31,13 @@ const Product = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         },
         created_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         },
         updated_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         },
         deleted_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         }
     };
 
@@ -47,6 +47,20 @@ const Product = (sequelize, DataTypes) => {
     }
     
     const ProductModel = sequelize.define(alias, cols, config);
+
+    ProductModel.associate = function(models){
+        ProductModel.belongsTo(models.Categorie, {
+            as: 'categorias',
+            foreignKey: 'category_id'
+        })
+        ProductModel.belongsToMany(models.User, {
+            as: 'usuarios',
+            through: 'user_products',
+            foreignKey: 'product_id',
+            otherKey: 'user_id',
+            timestamps: false
+        })
+    }
     return ProductModel;
 
 }

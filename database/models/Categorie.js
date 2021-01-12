@@ -10,13 +10,13 @@ const Categorie = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         created_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         },
         updated_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         },
         deleted_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         }
     };
 
@@ -26,6 +26,13 @@ const Categorie = (sequelize, DataTypes) => {
     }
     
     const CategorieModel = sequelize.define(alias, cols, config);
+
+    CategorieModel.associate = function(models) {
+        CategorieModel.hasMany(models.Product, {
+            as: 'productos',
+            foreignKey: 'category_id'
+        })
+    }
     return CategorieModel;
 
 }

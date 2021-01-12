@@ -24,27 +24,32 @@
 						<p><label for="price" class="estilo-form">Precio del producto:</label></p>
 						<input type="text" id="price" name="price" placeholder="Ej: 888" class="estilo-form"> <br>
 					</div>
-					<div>
-						<p><label for="discount" class="estilo-form">Descuento:</label></p>
-						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="estilo-form"> <br>
+					<div class="col-12">
+						<p><label for="description" class="estilo-form">Descripción:</label></p>
+						<textarea name="description" id="description" class="estilo-form"></textarea>
 					</div>
 					<div>
-						<p><label for="category" class="estilo-form">Categoría:</label></p>
-						<select name="category" id="category" class="estilo-form">
+						<p><label for="discount" class="estilo-form">Descuento:</label></p>
+						<input type="text" id="discount" name="discount" placeholder="Ej: 15%" class="estilo-form"> <br>
+					</div>
+					<div>
+						<p><label for="varietal" class="estilo-form">Varietal:</label></p>
+						<select name="varietal" id="varietal" class="estilo-form">
 							<option value="">Elegí</option>
 							<option value="Tinto">Tinto</option>
-							<option value="Rosado">Rosado</option>
 							<option value="Blanco">Blanco</option>
+							<option value="Rosado">Rosado</option>
 						</select>
+					</div>
+					<div>
+						<p><label for="wine_cellar" class="estilo-form">Bodega:</label></p>
+						<input type="text" id="wine_cellar" name="wine_cellar" placeholder="Ej: Luigi Bosca" class="estilo-form"> <br>
 					</div>
 					<div>
                         <p><label for="image" class="estilo-form">Foto del Producto</label></p>
 						<input type="file" name="image" id="image"> <br>
 					</div>
-					<div class="col-12">
-						<p><label for="description" class="estilo-form">Descipción:</label></p>
-						<textarea name="description" id="description" class="estilo-form"></textarea>
-					</div>
+					
 					<div class="col-12">
 						<button type="submit" class="register">Guardar producto</button>
 					</div>

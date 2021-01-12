@@ -28,13 +28,13 @@ const User = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         },
         created_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         },
         updated_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         },
         deleted_at: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         }
     };
 
@@ -44,8 +44,19 @@ const User = (sequelize, DataTypes) => {
     }
     
     const UserModel = sequelize.define(alias, cols, config);
+
+    UserModel.associate = function(models){
+    UserModel.belongsToMany(models.Product, {
+        as: 'productos',
+        through: 'user_products',
+        foreignKey: 'user_id',
+        otherKey: 'product_id',
+        timestamps: false
+    })
+    }
     return UserModel;
 
 }
 
 module.exports = User;
+
