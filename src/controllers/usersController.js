@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-let bcrypt = require('bcrypt')
+let bcrypt = require('bcrypt');
+const db = require('../../database/models');
 
 function getAllUsers(){
     const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -19,31 +20,20 @@ const usersController = {
     },
     store: function(req, res, next){
 
-        const usersJSON = fs.readFileSync('src/data/users.json', { encoding: 'utf-8'});
-        let users;
-        console.log(usersJSON)
-        if (usersJSON == '') {
-            users = [];
-        } else {
-            users = JSON.parse(usersJSON);
-        }
         
-        const user = {
-            id: generateNewId(),
+        const id = generateNewId();
+        db.User.create({
+            id: id,
             name: req.body.name,
             last_name: req.body.last_name,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
             date: req.body.date,
             avatar: req.files[0].filename
-        };
+        })
         
-        
-        users.push(user);
-        const newusersJSON = JSON.stringify(users, null, ' ');
-        fs.writeFileSync('src/data/users.json', newusersJSON);
 
-        return res.render('../views/index');
+        res.redirect('users/profile/' + id);
     },
 
     login: function (req, res, next) {
@@ -85,7 +75,7 @@ const usersController = {
     list: async (req, res, next) => {
             const usersdb = await db.User.findAll();
     
-            res.render('/usersdb', { usersdb })
+            res.render('users/usersdb', { usersdb })
         }
 }
 
