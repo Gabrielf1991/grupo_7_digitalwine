@@ -1,6 +1,7 @@
+const { SSL_OP_CISCO_ANYCONNECT } = require('constants');
 const fs = require('fs');
 const path = require('path');
-// const db = require('../database/models');
+const db = require('../../database/models')
 
 function getAllProducts(){
     const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -10,7 +11,6 @@ function getAllProducts(){
 function writeProducts(productsToSave){
 	const productsToStringify = JSON.stringify(productsToSave, null, ' ');
 	return fs.writeFileSync('./src/data/productsDataBase.json', productsToStringify);
-	
 }
 
 function generateNewId(){
@@ -19,105 +19,78 @@ function generateNewId(){
 }
 
 const controller = {
-    index: (req, res) => {
-        const products = getAllProducts();
+
+    list: async (req, res) => {
+        const products = await db.Product.findAll();
 
         res.render('products/products-list', {
-            products: products,
+            products
         });
 
     },
-    detail: (req, res) => {
+    detail: async (req, res) => {
         const id = req.params.id;
-        const products = getAllProducts();
-        const result = products.find((product) => {
-            return product.id == id
-        })
-
+        const product = await db.Product.findByPk(id);
+            
         res.render ('products/product-detail', {
-            product: result
-        })
+            product
+        });
     },
-    edit: (req, res) => {
-        const products = getAllProducts();
-		const id = req.params.id;
-		const result = products.find((product) => {
-			return product.id == id
-        })
-        res.render('products/product-edit-form', {
-			productToEdit: result
-		})
+    create: function (req, res){
+        res.render('products/product-create-form')
     },
-    update: (req, res, next) => {
-        const products = getAllProducts();
-        const id = req.params.id;
-
-        const editedProducts = products.map(function(product){
-            if (product.id == id){
-                product.name = req.body.name;
-                product.price = req.body.price;
-                product.bodega = req.body.bodega;
-                product.category = req.body.category;
-                product.description = req.body.description;
-                product.image = req.files[0] ? req.files[0].filename : product.image
-            }
-            
-            return product;
-
-            
-        }) 
-
-        writeProducts(editedProducts);
-        res.redirect('/product-detail/' + id)
-    },
-
-    
-
-    create: (req, res) => {
-
-        res.render('products/product-create-form');
-
-    },
-    store: (req, res, next) => {
-
-        const newProduct = {
-
-            id: generateNewId(),
-
-            name:req.body.name,
-
-            price:req.body.price ,
-
-            description:req.body.description,
-
-            bodega: req.body.bodega,
-
+    store: function (req, res){
+        db.Product.create({
+            name: req.body.name ,
+            price: req.body.price,
+            detail: req.body.detail,
+            discount: req.body.discount,
+            varietal: req.body.varietal,
+            wine_cellar: req.body.wine_cellar, 
             image: req.files[0].filename
-
-        }
-
-        const products = getAllProducts();
-
-        const productsToSave = [...products, newProduct];
-
-        writeProducts(productsToSave);
-
-        res.redirect('/');
-
-    },
-    destroy: (req, res, next) => {
-            const products = getAllProducts();
-            const productsDelete = products.filter(product => product.id != req.params.id);
-    
-            writeProducts(productsDelete);
+        });
             res.redirect('/products');
-      
     },
+    edit: async (req, res) => {
+        const id = req.params.id;
+        const product = await db.Product.findByPk(id);
 
-    list: async (req, res, next) => {
-        const productsdb = await db.Product.findAll();
+        res.render('products/product-edit-form', {
+            product
+        });
+    },
+    update: function (req, res) {
+        db.Product.update({
+            name: req.body.name ,
+            price: req.body.price,
+            detail: req.body.detail,
+            discount: req.body.discount,
+            varietal: req.body.varietal,
+            wine_cellar: req.body.wine_cellar, 
+            image: req.files[0] ? req.files[0].filename : product.image
+        }, {
+            where: {
+                id: req.params.id
+            } 
+    })   
+            res.redirect('/product-detail/' +  req.params.id)   
+    },
+    delete: function(req, res) {
+        db.Product.destroy({
+            where:{
+                id : req.params.id
+            }
+        })
+            res.redirect('/products');
+    },
+    search: async function (req, res){
+        const userSearch = req.body.name;
+        const searchedProduct = await db.Product.findAll(userSearch)
 
-        res.render('/productsdb', { productsdb })
+        res.render('products-list', {
+            searchedProduct
+        })
+        
     }
 }
 

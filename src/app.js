@@ -40,7 +40,6 @@ app.use(session({
 app.use(express.static(path.join(__dirname, '../public')));
 
 
-
 app.use('/users', usersRouter);
 app.use('/carrito', carritoRouter);
 app.use('/login', loginRouter);
@@ -52,8 +51,8 @@ app.use('/product-edit-form', productEditFormRouter);
 app.use('/products', productsRouter);
 app.use('/', mainRouter);
 
-app.use('/productsdb', productsdbRouter.list)
-app.use('/usersdb', usersdbRouter.list)
+/* app.use('/productsdb', productsdbRouter.list)
+app.use('/usersdb', usersdbRouter.list) */
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
