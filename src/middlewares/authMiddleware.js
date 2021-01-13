@@ -1,9 +1,9 @@
- const authMiddleware = function (req, res, next){
-    if (req.session.email || req.cookies.email) {
-        req.userEmail = req.session.email ? req.session.email : req.cookies.email;
+const auth = (req, res, next) => {
+
+    if(req.session.userLog){
         return next();
     }
-    res.redirect('/login');
- }
+    return res.redirect('/login');
+}
 
- module.exports = authMiddleware;
+module.exports = auth;

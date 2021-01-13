@@ -1,9 +1,9 @@
 const guestMiddleware = function (req, res, next){
-    if(req.session.email == undefined){
-        next();
-    } else {
-        res.redirect('users/profile/:id');
-    }
+    if(!req.session.userLog){
+        return next();
+    } 
+    
+    return res.redirect('/');
 
 
 }

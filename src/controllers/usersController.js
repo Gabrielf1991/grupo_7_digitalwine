@@ -1,17 +1,18 @@
 const fs = require('fs');
 const path = require('path');
-let bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const db = require('../../database/models');
+const { validationResult } = require ('express-validator');
 
-function getAllUsers(){
-    const usersFilePath = path.join(__dirname, '../data/users.json');
-    return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-}
+// function getAllUsers(){
+//     const usersFilePath = path.join(__dirname, '../data/users.json');
+//     return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// }
 
-function generateNewId(){
-    const products = getAllUsers();
-	return products.pop().id + 1;
-}
+// function generateNewId(){
+//     const products = db.User.findAll();
+// 	return products.pop().id + 1;
+// }
 
 const usersController = {
     
@@ -20,10 +21,18 @@ const usersController = {
     },
     store: function(req, res, next){
 
+        const results = validationResult(req);
         
-        const id = generateNewId();
+        if(!results.isEmpty()){
+            return res.render("user/register", {
+                errors: results.errors,
+                old: req.body
+            });
+        }
+
+        //const id = generateNewId();
         db.User.create({
-            id: id,
+            //id: id,
             name: req.body.name,
             last_name: req.body.last_name,
             email: req.body.email,
@@ -33,7 +42,7 @@ const usersController = {
         })
         
 
-        res.redirect('users/profile/' + id);
+        res.redirect('users/profile/' + req.params.id);
     },
 
     login: function (req, res, next) {
@@ -41,15 +50,23 @@ const usersController = {
         res.render('../views/users/login');
 
     },
-    processLogin : function (req, res) {
+    processLogin : async (req, res) => {
 
-        const email= req.body.email;
-        const password= req.body.password;
-        const users= getAllUsers();
+        const email= req.params.email;
+        const password= req.params.password;
+        const id = req.body.id;
 
-        const existingUser= users.find((user) => {
-            return user.email === email;
-        });
+        const existingUser = await db.User.findByPk(req.body.id);
+        console.log(existingUser);
+        if( existingUser.email === email){
+            return req.session.userLog = existingUser;
+        } else {
+            res.redirect('/register')
+        };
+        
+        // const existingUser1= users.find((user) => {
+        //     return user.email === email;
+        // });
 
         if(existingUser && bcrypt.compareSync(password, existingUser.password)) {
 
@@ -64,16 +81,17 @@ const usersController = {
            res.redirect('/register')
         },
     showProfile: (req, res) => {
-            const user = getAllUsers().find((user) => {
+            const user = db.User.findAll().find((user) => {
                 return user.email === req.userEmail;
             });
     
             res.render ('users/profile', {
-                userToShow: user
+                 user
             })
         },
     list: async (req, res, next) => {
             const usersdb = await db.User.findAll();
+            console.log(usersdb);
     
             res.render('users/usersdb', { usersdb })
         }
