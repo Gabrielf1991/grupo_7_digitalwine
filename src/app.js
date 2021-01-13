@@ -5,7 +5,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const setLocals = require('./middlewares/setLocals');
+const log = require('./middlewares/log');
 
+// Rutas
 const usersRouter = require('./routes/users');
 const carritoRouter = require('./routes/carrito');
 const loginRouter = require('./routes/login');
@@ -13,12 +16,12 @@ const productoRouter = require('./routes/product-detail');
 const registerRouter = require('./routes/register');
 const productCreateFormRouter = require('./routes/product-create-form');
 const productEditFormRouter = require('./routes/product-edit-form'); 
-
 const productsRouter = require('./routes/products');
 const mainRouter = require('./routes/main');
-
 const productsdbRouter = require('./routes/productsdb');
 const usersdbRouter = require('./routes/usersdb');
+
+//
 
 const app = express();
 
@@ -38,6 +41,9 @@ app.use(session({
       }));
 
 app.use(express.static(path.join(__dirname, '../public')));
+
+app.use(setLocals);
+app.use(log);
 
 
 app.use('/users', usersRouter);
