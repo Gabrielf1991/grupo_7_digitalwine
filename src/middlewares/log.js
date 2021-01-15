@@ -6,17 +6,22 @@ const db = require('../../database/models');
 
  module.exports = (req, res, next) => {
 
-    if(!req.session.userLog && req.cookies.user){
-
-        const id = req.params.id;
-        const users = db.User.findByPk(id);
-
-        console.log(users);
+    if(!req.session.email && req.cookies.email){
+        db.User.findOne({
+            where:{
+                email: req.cookies.email
+            }
+        })
+        .then((userToLogin) => {
+            req.session.userLog = userToLogin;
+            return next();
+        })
 
 
         
-        const userToLogin = db.User.findAll( user => req.cookies.user == user.id);
-        req.session.userLog = userToLogin;
-    }
+    } else { 
+
     return next();
+
+    }
 }

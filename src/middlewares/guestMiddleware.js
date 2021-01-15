@@ -1,5 +1,5 @@
 const guestMiddleware = function (req, res, next){
-    if(!req.session.userLog){
+    if(!req.session.email){
         return next();
     } 
     

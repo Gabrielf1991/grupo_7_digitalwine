@@ -52,21 +52,14 @@ const usersController = {
     },
     processLogin : async (req, res) => {
 
-        const email= req.params.email;
-        const password= req.params.password;
-        const id = req.body.id;
+        const email= req.body.email;
+        const password= req.body.password;
 
-        const existingUser = await db.User.findByPk(req.body.id);
-        console.log(existingUser);
-        if( existingUser.email === email){
-            return req.session.userLog = existingUser;
-        } else {
-            res.redirect('/register')
-        };
-        
-        // const existingUser1= users.find((user) => {
-        //     return user.email === email;
-        // });
+        const existingUser = await db.User.findOne({
+            where:{
+                email: email
+            },
+        });
 
         if(existingUser && bcrypt.compareSync(password, existingUser.password)) {
 
@@ -75,15 +68,17 @@ const usersController = {
             }
 
             req.session.email = email;
-            
+
             return res.redirect('/');
         }
            res.redirect('/register')
         },
-    showProfile: (req, res) => {
-            const user = db.User.findAll().find((user) => {
-                return user.email === req.userEmail;
-            });
+    showProfile: async (req, res) => {
+            const user = await db.User.findOne({
+                where:{
+                    email: req.session.email
+                }
+            })
     
             res.render ('users/profile', {
                  user

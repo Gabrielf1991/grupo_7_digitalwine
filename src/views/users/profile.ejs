@@ -7,13 +7,13 @@
         <div id="userdiv">
             <h1>Perfil de Usuario</h1>
             <div id="userimg">
-                <img height="300px" width="auto" src="/images/users/<%=userToShow.avatar %>" alt="">
+                <img height="300px" width="auto" src="/images/users/<%= user.avatar %>" alt="">
             </div>
             <div id="datodiv">
-                <p class="datopar"> <span class="propiedad">Nombre: hola </span> </p>
-                <p class="datopar"> <span class="propiedad">Apellido: <%= userToShow.last_name %></span> </p>
-                <p class="datopar"> <span class="propiedad">E-mail: <%= userToShow.email %></span></p>
-                <p class="datopar"> <span class="propiedad">Fecha de Nacimiento: <%= userToShow.date %></span>  </p>
+                <p class="datopar"> <span class="propiedad">Nombre: <%= user.name %> </span> </p>
+                <p class="datopar"> <span class="propiedad">Apellido: <%= user.last_name %></span> </p>
+                <p class="datopar"> <span class="propiedad">E-mail: <%= user.email %></span></p>
+                <p class="datopar"> <span class="propiedad">Fecha de Nacimiento: <%= user.date %></span>  </p>
             </div>
         </div>
         <%- include("../partials/footer.ejs")%>
