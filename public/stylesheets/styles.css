@@ -23,6 +23,11 @@ a:visited{
   text-decoration: none;
 }
 
+small {
+  color: red; 
+  font-weight: bold;
+}
+
 
 @media(max-width:440px){
 
@@ -148,6 +153,8 @@ nav {
   text-align:center;
   width: 16%;
 }
+
+
 
   /*------------ M A I N INDEX.EJS------------*/
 

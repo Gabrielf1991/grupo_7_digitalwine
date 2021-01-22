@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const productsController = require('../controllers/productsController');
+const validator = require('../middlewares/validator');
 const multer = require('multer');
 const path = require('path');
 
@@ -15,6 +16,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
   router.get('/:id', productsController.edit);
-  router.put('/:id', upload.any(), productsController.update);
+  router.put('/:id', upload.any(), validator.create, productsController.update);
   
   module.exports = router;

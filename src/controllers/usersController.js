@@ -4,16 +4,6 @@ const bcrypt = require('bcrypt');
 const db = require('../../database/models');
 const { validationResult } = require ('express-validator');
 
-// function getAllUsers(){
-//     const usersFilePath = path.join(__dirname, '../data/users.json');
-//     return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-// }
-
-// function generateNewId(){
-//     const products = db.User.findAll();
-// 	return products.pop().id + 1;
-// }
-
 const usersController = {
     
     register: function (req, res) {
@@ -24,7 +14,7 @@ const usersController = {
         const results = validationResult(req);
         
         if(!results.isEmpty()){
-            return res.render("user/register", {
+            return res.render("users/register", {
                 errors: results.errors,
                 old: req.body
             });

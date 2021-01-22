@@ -1,17 +1,9 @@
 const { SSL_OP_CISCO_ANYCONNECT } = require('constants');
 const fs = require('fs');
 const path = require('path');
-const db = require('../../database/models')
+const db = require('../../database/models');
+const { validationResult } = require ('express-validator');
 
-//function getAllProducts(){
-//    const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-//    return JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-//}
-
-// function writeProducts(productsToSave){
-// 	const productsToStringify = JSON.stringify(productsToSave, null, ' ');
-// 	return fs.writeFileSync('./src/data/productsDataBase.json', productsToStringify);
-// }
 
 function generateNewId(){
 	const products = getAllProducts();
@@ -40,6 +32,16 @@ const controller = {
         res.render('products/product-create-form')
     },
     store: function (req, res){
+
+        const results = validationResult(req);
+        
+        if(!results.isEmpty()){
+            return res.render("products/product-create-form", {
+                errors: results.mapped(),
+                old: req.body
+            });
+        }
+
         db.Product.create({
             name: req.body.name ,
             price: req.body.price,
@@ -59,8 +61,21 @@ const controller = {
             product
         });
     },
-    update: function (req, res) {
-        db.Product.update({
+    update: async function (req, res) {
+
+        const id = req.params.id;
+        const product = await db.Product.findByPk(id);
+
+        const results = validationResult(req);
+
+        if(!results.isEmpty()){
+            return res.render("products/product-create-form", {
+                errors: results.mapped(),
+                old: req.body
+            });
+        }
+
+        await db.Product.update({
             name: req.body.name ,
             price: req.body.price,
             detail: req.body.detail,
@@ -70,7 +85,7 @@ const controller = {
             image: req.files[0] ? req.files[0].filename : product.image
         }, {
             where: {
-                id: req.params.id
+                id: id
             } 
     })   
             res.redirect('/product-detail/' +  req.params.id)   
