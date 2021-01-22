@@ -36,7 +36,7 @@
 						<p><label for="detail" class="estilo-form">Detalle del producto:</label></p>
 						<textarea name="detail" placeholder="" id="detail" class="estilo-form"><%= product.detail %></textarea> <br>
 						<br>
-						<small style="color: red;">
+						<small>
 							<%= typeof errors === 'undefined' ? '' : errors.detail ? errors.detail.msg : '' %>
 						</small>
 					</div>
