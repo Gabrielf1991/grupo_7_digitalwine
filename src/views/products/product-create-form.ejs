@@ -16,17 +16,27 @@
 		<div class="container clase-create-form">
 			<form action="/product-create-form" method="POST" enctype="multipart/form-data">
 				<div>
+
 					<div>
 						<p><label for="name" class="estilo-form">Nombre del producto:</label></p>
 						<input type="text" id="name" name="name" placeholder="Ej: Luigi Bosca" class="estilo-form"> <br>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.name ? errors.name.msg : '' %>
+						</small>
 					</div>
 					<div>
 						<p><label for="price" class="estilo-form">Precio del producto:</label></p>
 						<input type="text" id="price" name="price" placeholder="Ej: 888" class="estilo-form"> <br>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.price ? errors.price.msg : '' %>
+						</small>
 					</div>
 					<div class="col-12">
 						<p><label for="description" class="estilo-form">Descripción:</label></p>
 						<textarea name="description" id="description" class="estilo-form"></textarea>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.description ? errors.description.msg : '' %>
+						</small>
 					</div>
 					<div>
 						<p><label for="discount" class="estilo-form">Descuento:</label></p>
@@ -35,7 +45,7 @@
 					<div>
 						<p><label for="varietal" class="estilo-form">Varietal:</label></p>
 						<select name="varietal" id="varietal" class="estilo-form">
-							<option value="">Elegí</option>
+							<option value="" disabled>Elegí</option>
 							<option value="Tinto">Tinto</option>
 							<option value="Blanco">Blanco</option>
 							<option value="Rosado">Rosado</option>
@@ -44,10 +54,16 @@
 					<div>
 						<p><label for="wine_cellar" class="estilo-form">Bodega:</label></p>
 						<input type="text" id="wine_cellar" name="wine_cellar" placeholder="Ej: Luigi Bosca" class="estilo-form"> <br>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.wine_cellar ? errors.wine_cellar.msg : '' %>
+						</small>
 					</div>
 					<div>
                         <p><label for="image" class="estilo-form">Foto del Producto</label></p>
 						<input type="file" name="image" id="image"> <br>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.image ? errors.image.msg : '' %>
+						</small>
 					</div>
 					
 					<div class="col-12">

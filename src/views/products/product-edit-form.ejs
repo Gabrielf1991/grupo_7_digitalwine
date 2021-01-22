@@ -16,17 +16,29 @@
 		<div class="container clase-create-form">
 			<form action="/product-edit-form/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div>
+
 					<div>
 						<p><label for="name" class="estilo-form">Nombre del producto:</label></p>
 						<input type="text" id="name" name="name" value="<%= product.name %>"  class="estilo-form"> <br>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.name ? errors.name.msg : '' %>
+						</small>
+		
 					</div>
 					<div>
 						<p><label for="price" class="estilo-form">Precio del producto:</label></p>
 						<input type="text" id="price" name="price" value="<%= product.price %>" class="estilo-form"> <br>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.price ? errors.price.msg : '' %>
+						</small>
 					</div>
 					<div class="col-12">
 						<p><label for="detail" class="estilo-form">Detalle del producto:</label></p>
-						<textarea name="detail" placeholder="<%= product.detail %>" id="detail" class="estilo-form"><%= product.description %></textarea>
+						<textarea name="detail" placeholder="" id="detail" class="estilo-form"><%= product.detail %></textarea> <br>
+						<br>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.detail ? errors.detail.msg : '' %>
+						</small>
 					</div>
 					<div class="col-12">
 						<p><label for="discount" class="estilo-form">Descuento:</label></p>
@@ -45,10 +57,16 @@
 					<div>
 						<p><label for="wine_cellar" class="estilo-form">Bodega:</label></p>
 						<input type="text" id="wine_cellar" name="wine_cellar" value="<%= product.wine_cellar %>" class="estilo-form"> <br>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.wine_cellar ? errors.wine_cellar.msg : '' %>
+						</small>
 					</div>
 					<div>
                         <p><label for="file" class="estilo-form">Foto del Producto</label></p>
 						<input type="file" name="image" id="image"> <br>
+						<small>
+							<%= typeof errors === 'undefined' ? '' : errors.image ? errors.image.msg : '' %>
+						</small>
 					</div>
 					
 					<div class="col-12">
