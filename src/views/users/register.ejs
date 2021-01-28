@@ -16,35 +16,46 @@
                 
             <form method="POST" action="/register" enctype="multipart/form-data">
 
-                <% if (typeof errors != "undefined") { %>
-
-                    <% errors.forEach(error => { %>
-
-                    <p> <%= error.msg %> </p>
-
-                    <% }) %>
-
-                    <% } %>
-
+            <div>
                 <p><label for="name"></label></p> 
                 <input type="text" name="name" id="name" placeholder="Nombre" class="estilo-form" > 
                 <br>
+                <small>
+                    <%= typeof errors === 'undefined' ? '' : errors.name ? errors.name.msg : '' %>
+                </small>
+            </div>
+            <div>  
 
                 <p><label for="last_name"></label></p>
                 <input type="text" name="last_name" id="last_name" placeholder="Apellido" class="estilo-form" > 
                 <br>
+                <small>
+                    <%= typeof errors === 'undefined' ? '' : errors.last_name ? errors.last_name.msg : '' %>
+                </small>
+            </div>
 
                 <br>
-
+            <div>
                 <span><label for="avatar" class="font">Cargá tu foto</label></span>
                 <input type="file" name="avatar"> <br>
-
+                <small>
+                    <%= typeof errors === 'undefined' ? '' : errors.avatar ? errors.avatar.msg : '' %>
+                </small>
+            </div>
+            <div>
                 <p><label for="email"></label></p>
                 <input type="email" name="email" id="email" placeholder="E-Mail" class="estilo-form" > <br>
-                
+                <small>
+                    <%= typeof errors === 'undefined' ? '' : errors.email  ? errors.email.msg : '' %>
+                </small>
+            </div>
+            <div>
                 <p><label for="password"></label></p>
                 <input type="password" name="password" id="password" placeholder="Contraseña" class="estilo-form" > <br>
-
+                <small>
+                    <%= typeof errors === 'undefined' ? '' : errors.password ? errors.password.msg : '' %>
+                </small>
+            </div>
                 <p><button type="submit" class="register">Enviar</button></p> 
 
             
