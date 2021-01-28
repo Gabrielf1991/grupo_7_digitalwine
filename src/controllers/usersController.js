@@ -15,7 +15,7 @@ const usersController = {
         
         if(!results.isEmpty()){
             return res.render("users/register", {
-                errors: results.errors,
+                errors: results.mapped(),
                 old: req.body
             });
         }
