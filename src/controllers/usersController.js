@@ -32,7 +32,7 @@ const usersController = {
         })
         
 
-        res.redirect('users/profile/' + req.params.id);
+        res.redirect('/');
     },
 
     login: function (req, res, next) {
@@ -41,6 +41,15 @@ const usersController = {
 
     },
     processLogin : async (req, res) => {
+
+        const results = validationResult(req);
+        
+        if(!results.isEmpty()){
+            return res.render("users/login", {
+                errors: results.mapped(),
+                old: req.body
+            });
+        }
 
         const email= req.body.email;
         const password= req.body.password;
@@ -76,7 +85,6 @@ const usersController = {
         },
     list: async (req, res, next) => {
             const usersdb = await db.User.findAll();
-            console.log(usersdb);
     
             res.render('users/usersdb', { usersdb })
         }

@@ -1,7 +1,6 @@
 const { body } = require('express-validator');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-const fs = require('fs');
 const db = require('../../database/models');
 
 
@@ -37,7 +36,7 @@ module.exports = {
                         email: email
                     },
                 })
-                return !existingUser;
+                return true;
 
             })
             .withMessage('Email ya registrado'),
@@ -75,12 +74,12 @@ module.exports = {
                 },
             })
            
-             if(existingUser){
-                if(bcrypt.compareSync(req.body.password, existingUser.password)){
-                    return true;
-                }
-                return false;
-            }
+            //  if(existingUser){
+            //     if(bcrypt.compareSync(req.body.password, existingUser.password)){
+            //         return true;
+            //     }
+            //     return false;
+            // }
         })       
         .withMessage('Email o contraseña inválidos')
         
