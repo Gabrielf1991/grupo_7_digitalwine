@@ -17,10 +17,17 @@
                 <form method="POST" action="/login">
                 <label for="email"></label>
                 <input type="email" name="email" id="email" placeholder="E-mail" class="estilo-form">
+                <br>
+                <small>
+                    <%= typeof errors === 'undefined' ? '' : errors.email ? errors.email.msg : '' %>
+                </small>
             </div>
              <div>
                 <label for="password"></label></p>
-                <input type="password" name="password" id="password" placeholder="Contraseña" class="estilo-form">
+                <input type="password" name="password" id="password" placeholder="Contraseña" class="estilo-form"> <br>
+                <small>
+                    <%= typeof errors === 'undefined' ? '' : errors.password ? errors.password.msg : '' %>
+                </small>
              </div>
              <div> 
                 <input type="checkbox" name="recordarme"> Recordarme
