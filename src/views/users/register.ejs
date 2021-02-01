@@ -14,7 +14,9 @@
                 <h2>Por favor, ingresá tus datos</h2>
                 </div>
                 
-            <form method="POST" action="/register" enctype="multipart/form-data">
+            <form method="POST" action="/register" enctype="multipart/form-data" id="form">
+
+            <div class="error"></div>
 
             <div>
                 <p><label for="name"></label></p> 
@@ -37,7 +39,7 @@
                 <br>
             <div>
                 <span><label for="avatar" class="font">Cargá tu foto</label></span>
-                <input type="file" name="avatar"> <br>
+                <input type="file" name="avatar" id="avatar"> <br>
                 <small>
                     <%= typeof errors === 'undefined' ? '' : errors.avatar ? errors.avatar.msg : '' %>
                 </small>
@@ -64,5 +66,7 @@
     </main>
 
     <%- include("../partials/footer.ejs")%>
+
+    <script src="/js/script.js"></script>
 </body>
 </html>
