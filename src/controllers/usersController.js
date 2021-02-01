@@ -42,14 +42,14 @@ const usersController = {
     },
     processLogin : async (req, res) => {
 
-        const results = validationResult(req);
+        // const resultsLogin = validationResult(req);
         
-        if(!results.isEmpty()){
-            return res.render("users/login", {
-                errors: results.mapped(),
-                old: req.body
-            });
-        }
+        // if(!resultsLogin.isEmpty()){
+        //     return  res.render("users/login", {
+        //         errors: resultsLogin.mapped(),
+        //         old: req.body
+        //     });
+        // }
 
         const email= req.body.email;
         const password= req.body.password;

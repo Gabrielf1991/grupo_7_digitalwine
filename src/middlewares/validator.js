@@ -10,25 +10,27 @@ module.exports = {
     register: [
         body('name')
             .notEmpty()
-            .withMessage('El campo Nombre es obligatorio')
-            .bail()
+            //.withMessage('El campo Nombre es obligatorio')
+            //.bail()
             .isLength({min: 3})
-            .withMessage('El Nombre debe tener al menos 3 caracteres')
-            .bail(),
+            //.withMessage('El Nombre debe tener al menos 3 caracteres')
+            //.bail()
+            ,
         body('last_name')
             .notEmpty()
-            .withMessage('El campo Apellido es obligatorio')
-            .bail()
+            //.withMessage('El campo Apellido es obligatorio')
+            //.bail()
             .isLength({min: 3})
-            .withMessage('El apellido debe tener al menos 3 caracteres')
-            .bail(),
+            //.withMessage('El apellido debe tener al menos 3 caracteres')
+            //.bail()
+            ,
         body('email')
             .notEmpty()
-            .withMessage('El campo email es obligatorio')
-            .bail()
+            //.withMessage('El campo email es obligatorio')
+            //.bail()
             .isEmail()
-            .withMessage('Email con formato incorrecto')
-            .bail()
+            //.withMessage('Email con formato incorrecto')
+            //.bail()
             .custom((value, { req }) => {
                 const email = req.body.email;
                 const existingUser = db.User.findOne({
@@ -39,7 +41,8 @@ module.exports = {
                 return true;
 
             })
-            .withMessage('Email ya registrado'),
+            //.withMessage('Email ya registrado')
+            ,
         body('password')
             .notEmpty()
             .withMessage('El campo es obligatorio')
@@ -74,12 +77,12 @@ module.exports = {
                 },
             })
            
-            //  if(existingUser){
-            //     if(bcrypt.compareSync(req.body.password, existingUser.password)){
-            //         return true;
-            //     }
-            //     return false;
-            // }
+            if(existingUser){
+            if(bcrypt.compareSync(req.body.password, existingUser.password)){
+                 return true;
+              }
+               return false;
+            }
         })       
         .withMessage('Email o contraseña inválidos')
         

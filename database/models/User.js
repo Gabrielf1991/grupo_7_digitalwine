@@ -18,9 +18,6 @@ const User = (sequelize, DataTypes) => {
         password: {
             type: DataTypes.TEXT
         },
-        dob: {
-            type: DataTypes.STRING
-        },
         avatar: {
             type: DataTypes.STRING
         },
