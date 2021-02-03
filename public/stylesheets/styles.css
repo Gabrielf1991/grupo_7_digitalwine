@@ -530,6 +530,47 @@ text {
   color: #890a10; 
 }
 
+.form-control {
+  position: relative;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form-control.success small {
+  visibility: hidden;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control i {
+  visibility: hidden;
+  position: initial;
+  top: 40px;
+  right: 10px;
+}
+
+
+
+
+
 
 .estilo-form {
   background-color: white;
@@ -537,6 +578,8 @@ text {
   padding: 7px 7px;
   border-radius: 1em;
   width:30%;
+  border-style: solid;
+  border-color: #a1a1a1;
 }
 
 ::placeholder { 
