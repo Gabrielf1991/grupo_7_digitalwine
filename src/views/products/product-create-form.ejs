@@ -61,14 +61,15 @@
 					<div>
 						<p><label for="wine_cellar" class="estilo-form">Bodega:</label></p>
 						<input type="text" id="wine_cellar" name="wine_cellar" placeholder="Ej: Luigi Bosca" class="estilo-form"> <br>
-						<small>
+						<small >
 							<%= typeof errors === 'undefined' ? '' : errors.wine_cellar ? errors.wine_cellar.msg : '' %>
 						</small>
 					</div>
 					<div>
                         <p><label for="image" class="estilo-form">Foto del Producto</label></p>
-						<input type="file" name="image" id="image" onchange="return fileValidation()"> <br>
-						<small>
+						<input type="file" name="image" id="image">
+						<br>
+						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.image ? errors.image.msg : '' %>
 						</small>
 					</div>
