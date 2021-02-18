@@ -68,8 +68,10 @@
 					</div>
 					<div>
                         <p><label for="file" class="estilo-form">Foto del Producto</label></p>
-						<input type="file" name="image" id="image"> <br>
+
+						<input type="file" name="image" id="image" value="product.image"> <br>
 						<small class="smallError">
+
 							<%= typeof errors === 'undefined' ? '' : errors.image ? errors.image.msg : '' %>
 						</small>
 					</div>
