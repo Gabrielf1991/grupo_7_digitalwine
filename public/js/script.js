@@ -34,7 +34,7 @@ form.addEventListener("submit", function(event) {
 
 function checkInputs (){
     
-    const nameValue = (name.value.trim().length >= 2) ;
+    const nameValue = (name.value.trim().length >= 2);
     const last_nameValue = (last_name.value.trim().length >= 2);
     const emailValue = (email.value.trim());
     const passwordValue = (password.value.trim().length >= 8);
