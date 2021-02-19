@@ -34,6 +34,7 @@ form.addEventListener("submit", function(event) {
 
 function checkInputs (){
     
+    let error = false;
     const nameValue = (name.value.trim().length >= 2);
     const last_nameValue = (last_name.value.trim().length >= 2);
     const emailValue = (email.value.trim());
@@ -41,30 +42,38 @@ function checkInputs (){
 
     if (nameValue == ''){
         setErrorFor(name, "El nombre debe tener al menos 2 caracteres")
+        error = true;
     } else {
         setSuccesFor(name);
     }
 
     if (last_nameValue == ''){
         setErrorFor(last_name, "El apellido debe tener al menos 2 caracteres")
+        error = true;
     } else {
         setSuccesFor(last_name);
     }
 
     if (emailValue == ''){
         setErrorFor(email, "Debe ingresar un email");
+        error = true;
     } else if (isEmail(emailValue)){
         setErrorFor(email, 'No ingresó un email válido');
+        error = true;
     } else {
         setSuccesFor(email);
     }
 
     if (passwordValue == ''){
         setErrorFor(password, "La contraseña debe tener al menos 8 caracteres")
+        error = true;
     } else {
         setSuccesFor(password);
     }
 
+    if (!error){
+        form.submit()
+    }
 
 }
 

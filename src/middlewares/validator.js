@@ -70,6 +70,7 @@ module.exports = {
         .withMessage('Email con formato incorrecto')
         .bail()
         .custom((value, { req }) => {
+            console.log("Hola ########################")
             const email = req.body.email;
             const existingUser = db.User.findOne({
                 where:{
@@ -90,40 +91,6 @@ module.exports = {
 
     /***** PRODUCTOS ********/
     create: [
-        body('name')
-            .notEmpty()
-            .withMessage('El campo Nombre es obligatorio')
-            .bail(),
-        body('price')
-            .notEmpty()
-            .withMessage('El campo Precio es obligatorio')
-            .bail(),
-        body('description')
-            .notEmpty()
-            .withMessage('El campo Descripción es obligatorio')
-            .bail()
-            .isLength({min: 20})
-            .withMessage('La Descripción debe tener al menos 20 caracteres')
-            .bail(),
-        body('varietal')
-            .notEmpty()
-            .withMessage('El campo Varietal es obligatorio')
-            .bail(),
-        body('wine_cellar')
-            .notEmpty()
-            .withMessage('El campo Bodega es obligatorio'),
-        body('image')
-            .custom((valueImg, { req }) => req.files[0])
-            .withMessage('La imagen es obligatoria')
-            .bail()
-            .custom((value, { req }) => {
-                const acceptedExtensions = ['.jpg', '.png', 'jpeg'];
-                const fileExt = path.extname(req.files[0].originalname);
-                return acceptedExtensions.includes(fileExt);
-            })
-            .withMessage('Extensión inválida. Las extensiones aceptadas son: JPG, PNG y JPEG')
-    ],
-    edit: [
         body('name')
             .notEmpty()
             .withMessage('El campo Nombre es obligatorio')
@@ -156,5 +123,34 @@ module.exports = {
                 return acceptedExtensions.includes(fileExt);
             })
             .withMessage('Extensión inválida. Las extensiones aceptadas son: JPG, PNG y JPEG')
+    ],
+    edit: [
+        body('name')
+            .notEmpty()
+            //.withMessage('El campo Nombre es obligatorio')
+            //.bail()
+            ,
+        body('price')
+            .notEmpty()
+            //.withMessage('El campo Precio es obligatorio')
+            //.bail()
+            ,
+        body('detail')
+            .notEmpty()
+            //.withMessage('El campo Descripción es obligatorio')
+            //.bail()
+            .isLength({min: 20})
+            //.withMessage('La Descripción debe tener al menos 20 caracteres')
+            //.bail()
+            ,
+        body('varietal')
+            .notEmpty()
+            //.withMessage('El campo Varietal es obligatorio')
+            //.bail()
+            ,
+        body('wine_cellar')
+            .notEmpty()
+            //.withMessage('El campo Bodega es obligatorio')}
+            ,
     ]
 }

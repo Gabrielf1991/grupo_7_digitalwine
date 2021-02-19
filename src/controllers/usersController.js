@@ -12,14 +12,14 @@ const usersController = {
     store: function(req, res, next){
 
         const results = validationResult(req);
-        
+        console.log(results)
         if(!results.isEmpty()){
             return res.render("users/register", {
                 errors: results.mapped(),
                 old: req.body
             });
         }
-
+        console.log(req.body)
         //const id = generateNewId();
         db.User.create({
             //id: id,
