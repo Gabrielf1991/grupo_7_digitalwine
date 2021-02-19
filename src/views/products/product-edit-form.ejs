@@ -30,18 +30,22 @@
 						</small>
 		
 					</div>
-					<div>
+					<div class="form-control">
 						<p><label for="price" class="estilo-form">Precio del producto:</label></p>
-						<input type="text" id="price" name="price" value="<%= product.price %>" class="estilo-form"> <br>
-						<small>
+						<input type="number" id="price" name="price" value="<%= product.price %>" class="estilo-form">
+						<i class="far fa-check-circle"></i>
+                		<i class="fas fa-exclamation-circle"></i> <br>
+						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.price ? errors.price.msg : '' %>
 						</small>
 					</div>
-					<div class="col-12">
+					<div class="col-12 form-control">
 						<p><label for="detail" class="estilo-form">Detalle del producto:</label></p>
-						<textarea name="detail" placeholder="" id="detail" class="estilo-form"><%= product.detail %></textarea> <br>
+						<textarea name="detail" placeholder="" id="detail" class="estilo-form"><%= product.detail %></textarea>
+						<i class="far fa-check-circle"></i>
+                		<i class="fas fa-exclamation-circle"></i> <br>
 						<br>
-						<small>
+						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.detail ? errors.detail.msg : '' %>
 						</small>
 					</div>
@@ -59,17 +63,23 @@
 							<option id="estilo-form" value="Rosado" <%= product.varietal == 'Rosado' ? "selected" : "" %>>Rosado</option>
 						</select>
 					</div>
-					<div>
+					<div class="form-control">
 						<p><label for="wine_cellar" class="estilo-form">Bodega:</label></p>
-						<input type="text" id="wine_cellar" name="wine_cellar" value="<%= product.wine_cellar %>" class="estilo-form"> <br>
-						<small>
+						<input type="text" id="wine_cellar" name="wine_cellar" value="<%= product.wine_cellar %>" class="estilo-form">
+						<i class="far fa-check-circle"></i>
+                		<i class="fas fa-exclamation-circle"></i> <br>
+						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.wine_cellar ? errors.wine_cellar.msg : '' %>
 						</small>
 					</div>
-					<div>
+					<div class="form-control">
                         <p><label for="file" class="estilo-form">Foto del Producto</label></p>
-						<input type="file" name="image" id="image" value="product.image"> <br>
+
+						<input type="file" name="image" id="image"> 
+						<i class="far fa-check-circle"></i>
+                		<i class="fas fa-exclamation-circle"></i><br>
 						<small class="smallError">
+
 							<%= typeof errors === 'undefined' ? '' : errors.image ? errors.image.msg : '' %>
 						</small>
 					</div>
@@ -84,6 +94,7 @@
     </div>
     
     <%- include("../partials/footer.ejs")%>
+	<script> const section = "edit" </script>
 	<script src="/js/scriptProducts.js"></script>
 </body>
 </html>

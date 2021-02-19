@@ -65,16 +65,17 @@ const controller = {
 
         const id = req.params.id;
         const product = await db.Product.findByPk(id);
-
+        console.log(req.body)
         const results = validationResult(req);
-
+        console.log(results);
         if(!results.isEmpty()){
-            return res.render("products/product-create-form", {
+            return res.render("products/product-edit-form", {
                 errors: results.mapped(),
-                old: req.body
+                old: req.body,
+                product,
             });
         }
-
+        console.log(req.body);
         await db.Product.update({
             name: req.body.name ,
             price: req.body.price,
