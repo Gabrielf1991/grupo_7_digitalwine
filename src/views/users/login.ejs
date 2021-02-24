@@ -9,40 +9,33 @@
         
     <main>     
         <div class="container">
-        
             <div class="titles">
                 <h1>Iniciá sesión</h1>
             </div>
                 <form method="POST" action="/login" id="login-form">
-                
-                <div class="error123123123123"></div>
 
-                <div class="form-control">
-                    <p><label for="email"></label></p>
+                <div>
+                    <label for="email"></label>
                     <input type="email" name="email" id="email" placeholder="E-mail" class="estilo-form">
-                    <i class="far fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i><br>
+                    <br>
                     <small class="smallError">
                         <%= typeof errors === 'undefined' ? '' : errors.email ? errors.email.msg : '' %>
                     </small>
                 </div>
-                <div class="form-control">
-
-                    <p><label for="password"></label></p>
+                <div>
+                    <label for="password"></label>
                     <input type="password" name="password" id="password" placeholder="Contraseña" class="estilo-form">
-                    <i class="far fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i><br>
+                    <br>
                     <small class="smallError">
                         <%= typeof errors === 'undefined' ? '' : errors.password ? errors.password.msg : '' %>
                     </small>
-                </div> 
-        
-             <div> 
-                <input type="checkbox" name="recordarme"> Recordarme
-            </div>
-            <div> 
+                </div>        
+                <div> 
+                    <input type="checkbox" name="recordarme"> Recordarme
+                </div>
+                <div> 
                 <p><button type="submit" value="login" class="register">Ingresá</button></p>
-            </div>
+                </div>
              </form>
 
         </div>  
