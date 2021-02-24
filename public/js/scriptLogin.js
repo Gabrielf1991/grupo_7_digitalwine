@@ -1,4 +1,3 @@
-//const db = require('../../database/models');
 const loginForm = document.querySelector("#login-form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
@@ -17,12 +16,6 @@ function checkInputs (){
 
     const emailValue = (email.value.trim());
     const passwordValue = (password.value.trim().length >= 8);
-
-    // const existingUser = db.User.findOne({
-    //     where:{
-    //         email: email
-    //     },
-    // })
 
     if (emailValue == ''){
         error = true;
