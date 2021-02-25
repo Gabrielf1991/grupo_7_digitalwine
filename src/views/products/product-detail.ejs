@@ -15,7 +15,7 @@
         <article class="article-producto">
             <div class="descripcion">
                 <h4>Descripción</h4>
-                <p><%= product.description %></p>
+                <p><%= product.detail %></p>
             </div>
         </article>
     </div>
@@ -23,7 +23,9 @@
     <div>
         <aside class="aside-producto">
             <h2><u><%= product.name %></u></h2>
-            <h4><%= product.price %> c/u</h4>
+            <h3 class="priceDetail"> 
+                $ <%= product.price %> c/u
+            </h3>
             <a href="#"><h5 style="font-weight: lighter;"><u>Metodos de pago</u></h5></a>
             <a href="#"><div class="logos-aside">
             <i class="fab fa-cc-visa"></i>
