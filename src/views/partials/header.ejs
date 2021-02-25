@@ -1,34 +1,50 @@
 <header>
-    <div class="container-logos">
-        <div class="div-logos">
-            <a href="#"><i class="fab fa-facebook logos-link"></i></a> 
-            <a href="#"><i class="fab fa-instagram logos-link"></i></a>
-            <a href="#"><i class="fab fa-whatsapp-square logos-link"></i></a>
-        </div>
+    <nav class="navbar navbar-expand-sm">
+        <a class="navbar-brand" href="/"><img src="images/ferc.png" width= 250px alt="Logo"> </a>
+        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation" ><i class="fas fa-bars"></i>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vinos <span class="sr-only">(current)</span></a>
 
-            <a href="/"><img class="logo" src="/images/ferc.png" alt="LOGO"></a>
-
-        <div class="topnav">
-            <input class="buscador" type="text" placeholder="¿Qué estás buscando?" >
-        </div>
-        
-            
-            <a href="/login"><i class="fas fa-user-alt derecha logos-link" ></i></a>
-            <a href="/carrito"><i class="fas fa-shopping-cart derecha logos-link"></i></a>
-            <a href="/users/profile">PERFIL</a>
-        
-
-        <nav>
-            <ul id="menu">
-                <li><a href="/products">Vinos</a></li>
-                <li><a href="/products">Espumantes</a></li>
-                <li><a href="/products">Espirituosas</a></li>
-                <li><a href="/products">Combos</a></li>
-                <li><a href="/products">Accesorios</a></li>
-                <li><a href="">Club DW</a></li>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="/products">Tintos</a>
+                <a class="dropdown-item" href="/products">Blancos</a>
+                <a class="dropdown-item" href="/products">Rosados</a>
+            </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/products">Espumantes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products">Espirituosas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products">Combos</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/products">Accesorios</a>
+                </li>
             </ul>
-        </nav>
-
-    </div>
-
+            <div class="nav-item active dropdown">
+               <a href="#" class="nav-link dropdown" aria-hidden="true" id="dropdownIcon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle dropdown"></i><span class="sr-only"></span></a>
+                
+                <div class="dropdown-menu" aria-labelledby="dropdownIcon">
+                    <a class="dropdown-item" href="/register">Registrate</a>
+                    <a class="dropdown-item" href="/login">Login</a>
+                </div>
+            </div>    
+            <div>
+                <span><a href="/carrito"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></span>
+                <span class="profile-font"><a href="/users/profile">Perfil</a></span>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="¿Qué estas buscando?">
+                <button class="btn btn-outline my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
 </header>
