@@ -292,6 +292,13 @@ text {
 /*------------ M A I N PRODUCTO.EJS------------*/
 
 
+.priceDetail {
+  color: #890a10;
+  font-weight: bold;
+  margin: 10px auto;
+  font-size: 30px;
+}
+
 .section-producto{
   display: flex;
   height: auto;
@@ -719,11 +726,11 @@ footer {
     justify-content: space-around;
     margin-top: 5%;
   }
-  h3 {
+   /* h3 {
     background-color: #890a10;
     color: #f4efeb;
     text-align: center;
-  }
+  } */
   
   .sections {
     background-color: #890a10;
