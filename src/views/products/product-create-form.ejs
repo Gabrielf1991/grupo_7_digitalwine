@@ -10,69 +10,63 @@
     <div class="container">
 		<div class="row">
 			<div>
-				<h2 class="container">Formulario de creación de productos</h2>
+				<h2>Formulario de creación de productos</h2>
 			</div>
-		</div>
-		<div class="container clase-create-form">
+		</div><br>
+		<div class="container">
 			<form action="/product-create-form" method="POST" enctype="multipart/form-data" id="product-form">
-				<div class="error123123123123"></div>
 				
 				<div>
-					<div class="form-control">
-						<p><label for="name">Nombre del producto:</label></p>
+					<div>
+						<h4><label for="name">Nombre del producto:</label></h4>
 						<input type="text" name="name" id="name" placeholder="Ej: Luigi Bosca" class="estilo-form">
-						<i class="far fa-check-circle"></i>
-                		<i class="fas fa-exclamation-circle"></i>
 						<br>
 						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.name ? errors.name.msg : '' %>
 						</small>
-					</div>
+					</div><br>
 					<div>
-						<p><label for="price" class="estilo-form">Precio del producto:</label></p>
+						<h4><label for="price">Precio del producto:</label></h4>
 						<input type="text" id="price" name="price" placeholder="Ej: 888" class="estilo-form"> <br>
 						<small>
 							<%= typeof errors === 'undefined' ? '' : errors.price ? errors.price.msg : '' %>
 						</small>
-					</div>
-					<div class="form-control">
-						<p><label for="detail" class="estilo-form">Descripción:</label></p>
+					</div><br>
+					<div>
+						<h4><label for="detail">Descripción:</label></h4>
 						<textarea name="detail" id="detail" class="estilo-form"></textarea>
-						<i class="far fa-check-circle"></i>
-						<i class="fas fa-exclamation-circle"></i>
-						<br>
 						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.description ? errors.description.msg : '' %>
 						</small>
-					</div>
+					</div><br>
 					<div>
-						<p><label for="discount" class="estilo-form">Descuento:</label></p>
+						<h4><label for="discount">Descuento:</label></h4>
 						<input type="text" id="discount" name="discount" placeholder="Ej: 15%" class="estilo-form"> <br>
-					</div>
+					</div><br>
 					<div>
-						<p><label for="varietal" class="estilo-form">Varietal:</label></p>
+						<h4><label for="varietal">Varietal:</label></h4>
 						<select name="varietal" id="varietal" class="estilo-form">
 							<option value="" disabled>Elegí</option>
 							<option value="Tinto">Tinto</option>
 							<option value="Blanco">Blanco</option>
 							<option value="Rosado">Rosado</option>
 						</select>
-					</div>
+					</div><br>
 					<div>
-						<p><label for="wine_cellar" class="estilo-form">Bodega:</label></p>
+						<h4><label for="wine_cellar"></label>Bodega:</label></h4>
 						<input type="text" id="wine_cellar" name="wine_cellar" placeholder="Ej: Luigi Bosca" class="estilo-form"> <br>
 						<small >
 							<%= typeof errors === 'undefined' ? '' : errors.wine_cellar ? errors.wine_cellar.msg : '' %>
-						</small>
+						</small><br>
 					</div>
 					<div>
-                        <p><label for="image" class="estilo-form">Foto del Producto</label></p>
+                        <h4><label for="image"	>Foto del Producto</label></h4>
 						<input type="file" name="image" id="image">
 						<br>
 						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.image ? errors.image.msg : '' %>
 						</small>
-					</div>
+					</div><br>
 					
 					<div class="col-12">
 						<button type="submit" class="register">Guardar producto</button>
