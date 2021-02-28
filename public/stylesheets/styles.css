@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #ede2d4;
     /*font-family: 'Quicksand', sans-serif;*/
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -112,18 +112,18 @@ color: #6e070c;
 
   /*------------ M A I N INDEX.EJS------------*/
 
-  
-
-  #imgbox{
+  .imgbox{
     width: auto;
+    height: auto;
   }
   
   
   #banner{
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: auto;
+      width: 70%;
+      height: 70%;
+      display: flex;
+      justify-content: center;
+      margin: 20px auto 20px auto;
   }
   
   #publi{
@@ -627,7 +627,7 @@ color: #6e070c;
   /*font-family: quicksand;*/
   padding: 7px 7px;
   border-radius: 1em;
-  width: 10%;
+  width: 20%;
 }
 
 .register:hover{
@@ -751,7 +751,7 @@ footer {
   flex-direction: row;
   background-color: #890a10;  
   justify-content: space-around;
-  
+}
 
   .footer-container {
     display: flex;
@@ -761,11 +761,12 @@ footer {
     justify-content: space-around;
     margin-top: 5%;
   }
-   /* h3 {
+
+    h3 {
     background-color: #890a10;
     color: #f4efeb;
     text-align: center;
-  } */
+  }
 
 
 .sections {
@@ -773,7 +774,6 @@ footer {
   color: #f4efeb;
   padding-top: 10px;
   /*font-family: quicksand;*/
-
   
 }
 .contact {

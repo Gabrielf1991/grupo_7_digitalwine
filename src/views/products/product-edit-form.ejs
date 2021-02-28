@@ -6,83 +6,73 @@
 <body>
     
     <%- include("../partials/header.ejs")%>
-
-    <div class="container">
-		<div class="row">
-			<div>
-				<h2 class="container">Estás editando <%= product.name %></h2>
+	<main>
+	    <div class="container">
+			<div class="row">
+				<div>
+					<h2>Estás editando: <%= product.name %></h2>
+				</div> <br>
 			</div>
-		</div>
-		<div class="container clase-create-form">
+			<div class="container">
 			<form action="/product-edit-form/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="product-form">
 				
-				<div class="error123123123123"></div>
-				
 				<div>
-					<div class="form-control">
-						<p><label for="name" class="estilo-form">Nombre del producto:</label></p>
+					<div>
+						<h4><label for="name"> Nombre del producto:</label></h4>
 						<input type="text" name="name" id="name" value="<%= product.name %>"  class="estilo-form">
-						<i class="far fa-check-circle"></i>
-                		<i class="fas fa-exclamation-circle"></i>
-						<br>
 						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.name ? errors.name.msg : '' %>
 						</small>
-		
-					</div>
-					<div class="form-control">
-						<p><label for="price" class="estilo-form">Precio del producto:</label></p>
+					</div> <br>
+
+					<div>
+						<h4><label for="price" >Precio del producto:</label></h4>
 						<input type="number" id="price" name="price" value="<%= product.price %>" class="estilo-form">
-						<i class="far fa-check-circle"></i>
-                		<i class="fas fa-exclamation-circle"></i> <br>
 						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.price ? errors.price.msg : '' %>
 						</small>
-					</div>
-					<div class="col-12 form-control">
-						<p><label for="detail" class="estilo-form">Detalle del producto:</label></p>
+					</div> <br>
+
+					<div class="col-12">
+						<h4><label for="detail" >Detalle del producto:</label></h4>
 						<textarea name="detail" placeholder="" id="detail" class="estilo-form"><%= product.detail %></textarea>
-						<i class="far fa-check-circle"></i>
-                		<i class="fas fa-exclamation-circle"></i> <br>
 						<br>
 						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.detail ? errors.detail.msg : '' %>
 						</small>
-					</div>
+					</div><br>
+
 					<div class="col-12">
-						<p><label for="discount" class="estilo-form">Descuento:</label></p>
+						<h4><label for="discount"></label>Descuento:</label></h4>
 						<textarea name="discount" placeholder="<%= product.discount %>" id="discount" class="estilo-form"><%= product.discount %></textarea>
 					</div>
 					
 					<div>
-						<p><label for="varietal" class="estilo-form">Varietal:</label></p>
+						<h4><label for="varietal"
+							>Varietal:</label></h4>
 						<select name="varietal" id="varietal" class="estilo-form">
 							<option id="estilo-form" value="">Elegí</option>
 							<option id="estilo-form" value="Tinto" <%= product.varietal == 'Tinto' ? "selected" : "" %>>Tinto</option>
 							<option id="estilo-form" value="Blanco" <%= product.varietal == 'Blanco' ? "selected" : "" %>>Blanco</option>
 							<option id="estilo-form" value="Rosado" <%= product.varietal == 'Rosado' ? "selected" : "" %>>Rosado</option>
 						</select>
-					</div>
-					<div class="form-control">
-						<p><label for="wine_cellar" class="estilo-form">Bodega:</label></p>
+					</div><br>
+
+					<div>
+						<h4><label for="wine_cellar">Bodega:</label></h4>
 						<input type="text" id="wine_cellar" name="wine_cellar" value="<%= product.wine_cellar %>" class="estilo-form">
-						<i class="far fa-check-circle"></i>
-                		<i class="fas fa-exclamation-circle"></i> <br>
 						<small class="smallError">
 							<%= typeof errors === 'undefined' ? '' : errors.wine_cellar ? errors.wine_cellar.msg : '' %>
 						</small>
-					</div>
-					<div class="form-control">
-                        <p><label for="file" class="estilo-form">Foto del Producto</label></p>
-
+					</div><br>
+					<div>
+                        <h4><label for="file">Foto del Producto</label></h4>
 						<input type="file" name="image" id="image"> 
-						<i class="far fa-check-circle"></i>
-                		<i class="fas fa-exclamation-circle"></i><br>
 						<small class="smallError">
 
 							<%= typeof errors === 'undefined' ? '' : errors.image ? errors.image.msg : '' %>
 						</small>
-					</div>
+					</div><br>
 					
 					<div class="col-12">
 						<button type="submit" class="register">Guardar cambios</button>
@@ -92,9 +82,10 @@
 		</div>
 
     </div>
-    
+</main>
     <%- include("../partials/footer.ejs")%>
-	<script> const section = "edit" </script>
+
+	<script> const section = "edit";  </script>
 	<script src="/js/scriptProducts.js"></script>
 </body>
 </html>

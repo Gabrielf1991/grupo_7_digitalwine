@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const setLocals = require('./middlewares/setLocals');
 const log = require('./middlewares/log');
+const cors = require('cors');
 
 // Rutas
 const usersRouter = require('./routes/users');
@@ -20,6 +21,7 @@ const productsRouter = require('./routes/products');
 const mainRouter = require('./routes/main');
 const productsdbRouter = require('./routes/productsdb');
 const usersdbRouter = require('./routes/usersdb');
+const apiRouter = require('./routes/api');
 
 //
 
@@ -54,6 +56,8 @@ app.use('/register', registerRouter);
 app.use('/product-create-form', productCreateFormRouter);
 app.use('/product-edit-form', productEditFormRouter);
 app.use('/usersdb', usersdbRouter);
+app.use(cors());
+app.use('/api', apiRouter);
 
 app.use('/products', productsRouter);
 app.use('/', mainRouter);
