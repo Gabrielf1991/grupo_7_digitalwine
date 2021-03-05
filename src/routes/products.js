@@ -22,6 +22,13 @@ router.post('/', upload.any(), productsController.store);
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/', productsController.list);
+
+router.get('/tintos', productsController.showTintos);
+router.get('/blancos', productsController.showBlancos);
+router.get('/rosados', productsController.showRosados);
+router.get('/espumantes', productsController.showEspumantes);
+
+
 router.get('/:id', productsController.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
