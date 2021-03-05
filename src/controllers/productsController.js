@@ -13,6 +13,7 @@ function generateNewId(){
 const controller = {
 
     list: async (req, res) => {
+
         const products = await db.Product.findAll();
 
         res.render('products/products-list', {
@@ -20,6 +21,55 @@ const controller = {
         });
 
     },
+    showTintos: async (req, res) => {
+
+        const productsTintos = await db.Product.findAll({
+                where:{
+                    varietal: "Tinto"
+                },
+            });
+            res.render('products/products-tintos', {
+                productsTintos
+            });
+
+    },
+    showBlancos: async (req, res) => {
+
+        const productsBlancos = await db.Product.findAll({
+                where:{
+                    varietal: "Blanco"
+                },
+            });
+            res.render('products/products-blancos', {
+                productsBlancos
+            });
+
+    },
+    showRosados: async (req, res) => {
+
+        const productsRosados = await db.Product.findAll({
+                where:{
+                    varietal: "Rosado"
+                },
+            });
+            res.render('products/products-rosados', {
+                productsRosados
+            });
+
+    },
+    showEspumantes: async (req, res) => {
+
+        const productsEspumantes = await db.Product.findAll({
+                where:{
+                    varietal: "Espumante"
+                },
+            });
+            res.render('products/products-espumantes', {
+                productsEspumantes
+            });
+
+    },
+
     detail: async (req, res) => {
         const id = req.params.id;
         const product = await db.Product.findByPk(id);
