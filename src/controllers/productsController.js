@@ -69,6 +69,30 @@ const controller = {
             });
 
     },
+    showEspirituosas: async (req, res) => {
+
+        const productsEspirituosas = await db.Product.findAll({
+                where:{
+                    varietal: "Espirituosas"
+                },
+            });
+            res.render('products/products-espirituosas', {
+                productsEspirituosas
+            });
+
+    },
+    showCombos: async (req, res) => {
+
+        const productsCombos = await db.Product.findAll({
+                where:{
+                    varietal: "Combo"
+                },
+            });
+            res.render('products/combos', {
+                productsCombos
+            });
+
+    },
 
     detail: async (req, res) => {
         const id = req.params.id;
@@ -79,14 +103,14 @@ const controller = {
         });
     },
     create: function (req, res){
-        res.render('products/product-create-form')
+        res.render('products/create')
     },
     store: function (req, res){
 
         const results = validationResult(req);
         
         if(!results.isEmpty()){
-            return res.render("products/product-create-form", {
+            return res.render("products/create", {
                 errors: results.mapped(),
                 old: req.body
             });

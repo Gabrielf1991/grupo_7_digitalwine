@@ -1,33 +1,32 @@
-const { User } = require('../../database/models');
+const { User, Product } = require('../../database/models');
 
 const controller = {
-
-    dashboard : (req,res) => {
-
-        res.json({
-            products:1 
-        });
     
+    productsList : async (req,res) => {
+        const products = await Product.findAll({
+            attributes: ['id','name', 'detail']
+        }) 
+        res.json({
+            meta: {
+                status: 200,
+                count: products.length
+            }, 
+            data: products,
+        });   
     },
     
-    list: async (req,res) => {
-        
+    usersList: async (req,res) => {
         const users = await  User.findAll({
-           attributes: ['email'],
-                   
-        })
-        
+            attributes: ['id', 'name', 'last_name', 'email']
+        })        
         res.json({
             meta: {
                 status: 200,
                 count: users.length
             }, 
-            data: {
-                users,
-            }
+            data: users,            
         }) 
     }
 }
-
 
 module.exports = controller;

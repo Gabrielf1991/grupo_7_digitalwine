@@ -290,7 +290,12 @@ color: #6e070c;
 }
   .article-producto{
     width: 500px;
-    height: 200px;
+  }
+
+
+  .div-img{
+    padding-bottom: 35px;
+  
   }
 
 .aside-producto{
