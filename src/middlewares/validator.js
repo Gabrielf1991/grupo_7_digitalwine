@@ -98,6 +98,8 @@ module.exports = {
         body('price')
             .notEmpty()
             .withMessage('El campo Precio es obligatorio')
+            .isFloat({min:1})
+            .withMessage('Debe ingresar un valor numérico')
             .bail(),
         body('detail')
             .notEmpty()

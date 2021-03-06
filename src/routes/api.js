@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const apiControllers = require('../controllers/apiControllers');
 
-router.get('/dashboard', apiControllers.dashboard);
-router.get('/users', apiControllers.list);
+router.get('/products-list', apiControllers.productsList);
+router.get('/users-list', apiControllers.usersList);
 
 
 module.exports = router;
