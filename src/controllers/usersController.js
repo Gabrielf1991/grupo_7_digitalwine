@@ -27,11 +27,9 @@ const usersController = {
             last_name: req.body.last_name,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            date: req.body.date,
             avatar: req.files[0].filename
         })
         
-
         res.redirect('/');
     },
 

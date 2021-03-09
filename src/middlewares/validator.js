@@ -55,7 +55,7 @@ module.exports = {
             .withMessage('El avatar es obligatorio')
             .bail()
             .custom((value, { req }) => {
-                const acceptedExtensions = ['.jpg', '.png', 'jpeg'];
+                const acceptedExtensions = ['.jpg', '.png', '.jpeg','.jfif'];
                 const fileExt = path.extname(req.files[0].originalname);
                 return acceptedExtensions.includes(fileExt);
             })
@@ -120,7 +120,7 @@ module.exports = {
             .withMessage('La imagen es obligatoria')
             .bail()
             .custom((value, { req }) => {
-                const acceptedExtensions = ['.jpg', '.png', 'jpeg'];
+                const acceptedExtensions = ['.jpg', '.png', '.jpeg'];
                 const fileExt = path.extname(req.files[0].originalname);
                 return acceptedExtensions.includes(fileExt);
             })
