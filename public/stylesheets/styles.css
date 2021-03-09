@@ -133,7 +133,7 @@ color: #6e070c;
   
   #publi{
       border-style: solid;
-      border-width:medium;
+      border-width: thin;
       border-color: #890a10 ;
       border-radius: 8px;   
       height: 50px;
@@ -217,6 +217,7 @@ color: #6e070c;
     border-radius: 10px;
     border: 3px solid #6e070c;
     text-align: center;
+    padding: 10px 15px 10px 15px;
   }
 
   .estilo {
@@ -236,6 +237,11 @@ color: #6e070c;
   .column {
     margin: 15px 15px 0;
     padding: 0;
+  }
+
+  .sugerenciasIndex{
+    margin-right: 5px !important;
+    margin-left: 5px !important;
   }
   
 
@@ -295,6 +301,7 @@ color: #6e070c;
 
   .blog {
     justify-content: center;
+  
   }
  
 
@@ -462,6 +469,7 @@ color: #6e070c;
           border:#d1898e;
           padding: 4px;
           font-weight:500;
+          border-radius: 8px;
     }
   
 
