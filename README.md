@@ -1,8 +1,7 @@
 # grupo_7_digitalwine
 
 
-E-commerce de vinos, bebidas y productos afines. 
-Servicio de suscripción mensual a nuestro club de vino.
+E-commerce de vinos y  bebidas. 
 
 Target: Desde Digital Wine, apuntamos a un público masculino entre 25 a 55 años, conocedor del mundo del vino pero interesado en salir de su zona de comfort y descubrir nuevas etiquetas que lo sorprendan. A su vez, queremos que más personas se adentren en este mundo y puedan disfrutar, como nosotros, de las bondades de esta bebida.  
 Es por eso que creamos un sitio simple pero, a la vez, atractivo, que permitirá que el cliente cuente con información de fácil acceso y con una experiencia de compra ágil. 
