@@ -4,6 +4,7 @@ module.exports = (req, res, next) => {
     
     if (req.session.email) {
         res.locals.userLog = req.session.email;
+        console.log(res.locals.userLog);
     }
     
     return next();

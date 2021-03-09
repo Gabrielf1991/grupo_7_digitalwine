@@ -165,8 +165,8 @@ const controller = {
     })   
             res.redirect('/product-detail/' +  req.params.id)   
     },
-    delete: function(req, res) {
-        db.Product.destroy({
+    delete: async function(req, res) {
+        await db.Product.destroy({
             where:{
                 id : req.params.id
             }

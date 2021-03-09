@@ -87,7 +87,13 @@ const usersController = {
             const usersdb = await db.User.findAll();
     
             res.render('users/usersdb', { usersdb })
-        }
+        },
+    logout: (req, res) => {
+
+        res.clearCookie('email')
+        req.session.destroy();
+        res.redirect('/');
+    }
 }
 
 module.exports = usersController;

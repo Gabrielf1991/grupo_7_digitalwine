@@ -14,11 +14,11 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage })
 
-/* GET users listing. */
-router.get('/users', function(req, res, next) {
-  res.send('respond with a resource');
-});
 
 router.get('/profile', authMiddleware, usersController.showProfile)
+
+// LogOut //
+
+router.get('/logout', authMiddleware, usersController.logout)
 
 module.exports = router;
