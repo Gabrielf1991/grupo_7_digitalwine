@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-sm">
-        <a class="navbar-brand" href="/"><img src="images/ferc.png" width= 250px alt="Logo"> </a>
+        <a class="navbar-brand" href="/"><img src="/images/ferc.png" width= 250px alt="Logo"> </a>
         <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
         aria-expanded="false" aria-label="Toggle navigation" ><i class="fas fa-bars"></i>
         </button>
@@ -11,6 +11,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vinos <span class="sr-only">(current)</span></a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" id="vinosList" href="/products">Vinos</a>
                 <a class="dropdown-item" href="/products/tintos">Tintos</a>
                 <a class="dropdown-item" href="/products/blancos">Blancos</a>
                 <a class="dropdown-item" href="/products/rosados">Rosados</a>
@@ -22,18 +23,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/products/espirituosas">Espirituosas</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products/combos">Combos</a>
+                </li>
             </ul>
             <div class="nav-item active dropdown">
                <a href="#" class="nav-link dropdown" aria-hidden="true" id="dropdownIcon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle dropdown"></i><span class="sr-only"></span></a>
                 
                 <div class="dropdown-menu" aria-labelledby="dropdownIcon">
-                    <a class="dropdown-item" href="/register">Registrate</a>
-                    <a class="dropdown-item" href="/login">Login</a>
+                    <% if (userLog) { %>
+                        <a class="dropdown-item" href="/users/profile"> <%= userLog %> <i class="fas fa-user"></i></a>
+                        <a class="dropdown-item" href="/users/logout">Cerrar sesión <i class="fas fa-sign-in-alt"></i></a>
+                    <% } else { %>
+                        <a class="dropdown-item" href="/register">Registrate</a>
+                        <a class="dropdown-item" href="/login">Login</a>
+                    <% } %>
                 </div>
             </div>    
             <div>
                 <span><a href="/carrito"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></span>
-                <span class="profile-font"><a href="/users/profile">Perfil</a></span>
             </div>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="¿Qué estas buscando?">
