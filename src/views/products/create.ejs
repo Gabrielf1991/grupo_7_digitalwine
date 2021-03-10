@@ -57,11 +57,16 @@
 						</select>
 					</div><br>
 					<div>
-						<h4><label for="wine_cellar"></label>Bodega:</label></h4>
+						<h4><label for="wine_cellar">Bodega:</label></h4>
 						<input type="text" id="wine_cellar" name="wine_cellar" placeholder="Ej: Luigi Bosca" class="estilo-form"> <br>
 						<small >
 							<%= typeof errors === 'undefined' ? '' : errors.wine_cellar ? errors.wine_cellar.msg : '' %>
 						</small><br>
+					<div>
+						<h4><label for="category_id">Categoria</label></h4>
+						<input type="number" id="category_id" name="category_id" class="estilo-form"> <br>
+
+					</div> <br>
 					</div>
 					<div>
                         <h4><label for="image"	>Foto del Producto</label></h4>
