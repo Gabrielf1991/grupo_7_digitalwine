@@ -123,6 +123,7 @@ const controller = {
             discount: req.body.discount,
             varietal: req.body.varietal,
             wine_cellar: req.body.wine_cellar, 
+            category_id: req.body.category_id,
             image: req.files[0].filename
         });
             res.redirect('/products');
@@ -157,6 +158,7 @@ const controller = {
             discount: req.body.discount,
             varietal: req.body.varietal,
             wine_cellar: req.body.wine_cellar, 
+            category_id: req.body.category_id,
             image: req.files[0] ? req.files[0].filename : product.image
         }, {
             where: {

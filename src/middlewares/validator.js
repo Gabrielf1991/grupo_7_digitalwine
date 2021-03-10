@@ -70,7 +70,6 @@ module.exports = {
         .withMessage('Email con formato incorrecto')
         .bail()
         .custom((value, { req }) => {
-            console.log("Hola ########################")
             const email = req.body.email;
             const existingUser = db.User.findOne({
                 where:{
